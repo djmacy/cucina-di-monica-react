@@ -1,0 +1,19 @@
+/* Logo.css */
+.logo {
+    /*margin-right: 10px;*/
+}
+
+.logo img {
+    width: auto;
+    height: 100px;
+    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: -5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    padding: 10px; /* Add padding for better clickability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}

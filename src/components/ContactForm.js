@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Install axios: npm install axios
+
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -13,10 +15,15 @@ const ContactForm = () => {
         setFormData((prevData) => ({ ...prevData, [name]: value}));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic (e.g., send data to server, show success message)
-        console.log('Form submitted:', formData);
+
+        try {
+            const response = await axios.post('http://localhost:3001/submit-form', formData);
+            console.log(response.data); // Log server response
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     return (

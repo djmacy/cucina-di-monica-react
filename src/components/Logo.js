@@ -1,6 +1,7 @@
 // Logo.js
 import React from 'react';
-import logoImage from '../images/helmet.png'; // Replace 'logo.png' with the path to your logo image
+import './Logo.css'
+import logoImage from '../images/cropped-MonicaFavicon-3.png'; // Replace 'logo.png' with the path to your logo image
 
 const Logo = () => {
     return (
