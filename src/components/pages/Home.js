@@ -6,8 +6,8 @@ import backgroundImage from '../../images/MonicaTeaching.jpg';
 const Home = () => {
     return (
         <div>
-            <Header title="Welcome to My Website" backgroundImage={backgroundImage} />
-            <p>This is the home page content.</p>
+            <Header title="La Cucina Di Monica" backgroundImage={backgroundImage} />
+            <p></p>
         </div>
     );
 };

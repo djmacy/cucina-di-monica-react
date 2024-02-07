@@ -7,15 +7,15 @@ const Header = ({ title, backgroundImage }) => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        width: '100%',
-        height: 'auto', // You can customize this
+        width: 'auto',
+        height: '300px', // You can customize this
         textAlign: 'center',
         padding: '50px' // Adjust the padding as needed
     };
 
     return (
-        <header style={headerStyle}>
-            <h1>{title}</h1>
+        <header className='header-container' style={headerStyle}>
+            <h1 className='header-title'>{title}</h1>
             {/* Add other elements as needed */}
         </header>
     );
