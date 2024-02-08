@@ -45,12 +45,14 @@
 .arrow-left{
     left: 20px;
 }
+
 .dot{
     margin-top: 20px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     box-shadow: 0 0 5px 3px #ccc;
+    justify-content: center;
 }
 .dot-active{
     background: #121227;

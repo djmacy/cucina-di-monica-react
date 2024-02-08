@@ -43,7 +43,6 @@ const Carousel = () => {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
-
     const  settings = {
         dots: true,
         infinite: true,
@@ -58,7 +57,7 @@ const Carousel = () => {
         prevArrow: <SamplePrevArrow/>,
         appendDots: (dots) => (
             <div>
-                <ul style={{ margin: "0px" }}> {dots} </ul>
+                <ul style={{ margin: "0px", justifyContent: "center" }}> {dots} </ul>
             </div>
         ),
         customPaging: (current, next) => (
