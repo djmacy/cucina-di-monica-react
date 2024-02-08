@@ -44,7 +44,16 @@ const Carousel = ({imageList, courseName}) => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        beforeChange: (current, next) => setSlideIndex(next),
+        beforeChange: (current, next) => {
+            // Adjust the slide index to account for center mode
+            const totalImages = images.length;
+            if (totalImages === 3) {
+                const adjustedNext = (next % totalImages + totalImages) % totalImages;
+                setSlideIndex(adjustedNext === totalImages - 1 ? 0 : adjustedNext + 1);
+            } else {
+                setSlideIndex(next);
+            }
+        },
         centerMode: true,
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
