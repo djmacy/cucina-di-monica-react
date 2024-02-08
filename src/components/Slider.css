@@ -27,6 +27,7 @@
     opacity: 1;
     transform: scale(1.1);
 }
+
 .arrow{
     font-size: 30px;
     padding: 5px 15px;
@@ -39,9 +40,11 @@
     z-index: 100;
     cursor: pointer;
 }
+
 .arrow-right{
     right: 20px;
 }
+
 .arrow-left{
     left: 20px;
 }
@@ -54,10 +57,12 @@
     box-shadow: 0 0 5px 3px #ccc;
     justify-content: center;
 }
+
 .dot-active{
     background: #121227;
     box-shadow: 0 0 15px 10px #ccc;
 }
+
 @media screen and (max-width: 768px) {
     .header{
         font-size: 7vw;

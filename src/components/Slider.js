@@ -6,15 +6,6 @@ import "./Slider.css"
 //icon import
 import {BsArrowLeft, BsArrowRight} from 'react-icons/bs'
 
-//images import
-import img1 from '../images/MonicaTeaching.jpg'
-import img2  from '../images/MonicaFavicon.png'
-import img3 from '../images/MonicaSmiling.jpg'
-import img4 from "../images/cropped-MonicaFavicon-3.png"
-
-//Need 4 images, I dont know how to do this for 3? we'll see
-const images = [img1, img2, img3, img4];
-
 function SampleNextArrow({onClick}) {
     return (
         <div className = 'arrow arrow-right' onClick={onClick}>
@@ -39,18 +30,20 @@ function EmptyArrow({onClick}) {
 }
 
 //Wont let me use the name slider because its imported that way
-const Carousel = () => {
-
-    const [slideIndex, setSlideIndex] = useState(0);
+//parameters a list of images and string for the name of the cooking class
+const Carousel = ({imageList, courseName}) => {
+    //Need 4 images, I dont know how to do this for 3? we'll see
+    const images = imageList;
+    const [slideIndex, setSlideIndex] = useState(1);
 
     const  settings = {
         dots: true,
         infinite: true,
-        speed: 1000,
         slidesToShow: 3,
+        speed: 1000,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         beforeChange: (current, next) => setSlideIndex(next),
         centerMode: true,
         nextArrow: <SampleNextArrow/>,
@@ -79,7 +72,7 @@ const Carousel = () => {
 
     return (
         <div className="container">
-            <h2 className="header">Class Name</h2>
+            <h2 className="header">{courseName}</h2>
                 <div className="slider">
                     <Slider {...settings}>
                         {
