@@ -40,12 +40,16 @@ const Carousel = ({imageList, courseName}) => {
     const  settings = {
         dots: true,
         infinite: true,
+        initialSlide: 0,
         slidesToShow: 3,
         speed: 1000,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
         beforeChange: (current, next) => {
+            console.log('Current slide index:', current);
+            console.log('Next slide index:', current);
+            console.log('SlideIndex', slideIndex);
             // Adjust the slide index to account for center mode
             if (totalImages === 3) {
                 const adjustedNext = (next % totalImages + totalImages) % totalImages;
@@ -63,7 +67,8 @@ const Carousel = ({imageList, courseName}) => {
             </div>
         ),
         customPaging: (current, next) => (
-            <div className={current === slideIndex ? 'dot dot-active' : 'dot'}>
+            //if current = 2 then I need slide index to be 2 as well. Right now when current =2 the slide index is 0
+            <div className={current === slideIndex-1 || (current === 2 && slideIndex === 0) ? 'dot dot-active' : 'dot'}>
             </div>
         ),
         responsive: [
