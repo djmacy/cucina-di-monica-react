@@ -66,11 +66,21 @@ const Carousel = ({imageList, courseName}) => {
                 <ul style={{ margin: "0px", justifyContent: "center" }}> {dots} </ul>
             </div>
         ),
-        customPaging: (current, next) => (
-            //if current = 2 then I need slide index to be 2 as well. Right now when current =2 the slide index is 0
-            <div className={current === slideIndex-1 || (current === 2 && slideIndex === 0) ? 'dot dot-active' : 'dot'}>
-            </div>
-        ),
+        customPaging: (current, next) => {
+            // For 4 images, use standard behavior
+            if (totalImages === 4) {
+                return (
+                    <div className={current === slideIndex ? 'dot dot-active' : 'dot'}>
+                    </div>
+                );
+            }
+
+            // For 3 images, apply the adjustment
+            return (
+                <div className={current === slideIndex - 1 || (current === 2 && slideIndex === 0) ? 'dot dot-active' : 'dot'}>
+                </div>
+            );
+        },
         responsive: [
             {
                 breakpoint: 768,
