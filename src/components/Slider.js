@@ -34,7 +34,8 @@ function EmptyArrow({onClick}) {
 const Carousel = ({imageList, courseName}) => {
     //Need 4 images, I dont know how to do this for 3? we'll see
     const images = imageList;
-    const [slideIndex, setSlideIndex] = useState(1);
+    const totalImages = images.length;
+    const [slideIndex, setSlideIndex] = useState(totalImages === 3 ? 1 : 0);
 
     const  settings = {
         dots: true,
@@ -46,7 +47,6 @@ const Carousel = ({imageList, courseName}) => {
         autoplaySpeed: 3000,
         beforeChange: (current, next) => {
             // Adjust the slide index to account for center mode
-            const totalImages = images.length;
             if (totalImages === 3) {
                 const adjustedNext = (next % totalImages + totalImages) % totalImages;
                 setSlideIndex(adjustedNext === totalImages - 1 ? 0 : adjustedNext + 1);
