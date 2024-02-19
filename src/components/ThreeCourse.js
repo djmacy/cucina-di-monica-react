@@ -1,10 +1,11 @@
-import Slider from '../Slider';
+import Slider from './Slider';
 import React from "react";
 
-const ThreeCourse = () => {
+const ThreeCourse = ({imageList}) => {
     return (
         <div>
-
+            <Slider imageList={imageList}/>
+            <h1></h1>
         </div>
     );
 };

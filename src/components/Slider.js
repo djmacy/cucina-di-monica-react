@@ -47,9 +47,9 @@ const Carousel = ({imageList, courseName}) => {
         autoplay: true,
         autoplaySpeed: 3000,
         beforeChange: (current, next) => {
-            console.log('Current slide index:', current);
-            console.log('Next slide index:', current);
-            console.log('SlideIndex', slideIndex);
+            //console.log('Current slide index:', current);
+            //console.log('Next slide index:', current);
+            //console.log('SlideIndex', slideIndex);
             // Adjust the slide index to account for center mode
             if (totalImages === 3) {
                 const adjustedNext = (next % totalImages + totalImages) % totalImages;
