@@ -16,7 +16,8 @@ const Classes = () => {
     return (
         <div>
             <Header backgroundImage={backgroundImage} title="Courses"/>
-            <CourseCard imageUrl={img1} title="Rome Menu"/>
+            <CourseCard imageUrl={img1} title="Rome Menu" id="Rome Card"/>
+            <CourseCard imageUrl={img2} title="Another Menu" id="Another Menu"/>
             <Slider imageList={romeMenuImages} courseName="Rome Menu" />
         </div>
     );
