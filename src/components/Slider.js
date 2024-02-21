@@ -45,7 +45,8 @@ const Carousel = ({imageList, courseName}) => {
         speed: 1000,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
+        pauseOnHover: false,
         beforeChange: (current, next) => {
             //console.log('Current slide index:', current);
             //console.log('Next slide index:', current);
@@ -83,13 +84,18 @@ const Carousel = ({imageList, courseName}) => {
         },
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 1080,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false,
                     nextArrow: <EmptyArrow />,
                     prevArrow: <EmptyArrow />,
+                    beforeChange: (current, next)=>setSlideIndex(next),//add logic here
+                    customPaging: (current, next) => (
+                        <div className={current === slideIndex ? 'dot dot-active' : 'dot'}>
+                        </div>
+                    )
                 }
             }]
     };

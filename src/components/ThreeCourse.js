@@ -1,11 +1,10 @@
 import Slider from './Slider';
 import React from "react";
 
-const ThreeCourse = ({imageList}) => {
+const ThreeCourse = ({imageList, title}) => {
     return (
         <div>
-            <Slider imageList={imageList}/>
-            <h1></h1>
+            <Slider imageList={imageList} courseName={title}/>
         </div>
     );
 };

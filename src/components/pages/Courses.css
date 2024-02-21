@@ -1,0 +1,5 @@
+/* Classes.css */
+.course-cards-container {
+    display: flex;
+    justify-content: space-between;
+}

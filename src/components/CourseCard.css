@@ -4,15 +4,17 @@
     width: 200px;
     height: 300px;
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 1px solid #534d3e;
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    background-color: #fdecbe;
+    margin-top: 10px;
 }
 
 .course-card:hover {
    /* transform: scale(1.05);*/
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adjust the box shadow for the raised effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust the box shadow for the raised effect */
+    transition: box-shadow 0.5s ease;
     cursor: pointer;
 }
 
