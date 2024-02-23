@@ -20,7 +20,7 @@ const CourseCard = ({ title, imageUrl, id, imageArray}) => {
             <img src={imageUrl} alt={title} className="course-image" />
             <h3 className="course-title">{title}</h3>
             <Modal id={id} isOpen={isModalOpen} onClose={closeModal}>
-                <ThreeCourse imageList={imageArray} title="Rome Menu"/>
+                <ThreeCourse imageList={imageArray} title={title}/>
             </Modal>
 
         </div>

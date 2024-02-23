@@ -9,6 +9,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fdecbe;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .course-card:hover {
