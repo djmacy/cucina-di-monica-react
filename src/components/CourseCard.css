@@ -3,19 +3,30 @@
     position: relative;
     width: 200px;
     height: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     overflow: hidden;
     border: 1px solid #534d3e;
-    transition: transform 0.3s ease;
+    transition: transform 1s ease;
+    transform: scale(0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fdecbe;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.course-card.grow {
+    transform: scale(1.0);
+}
+
+.course-card.clicked {
+    transform: none;
 }
 
 .course-card:hover {
    /* transform: scale(1.05);*/
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust the box shadow for the raised effect */
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
 

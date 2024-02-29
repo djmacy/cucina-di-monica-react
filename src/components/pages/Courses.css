@@ -1,5 +1,9 @@
 /* Classes.css */
 .course-cards-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.body{
+    overflow: hidden;
 }

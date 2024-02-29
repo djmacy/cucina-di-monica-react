@@ -3,9 +3,11 @@
     background-color: #fdecbe;
     color: #534d3e;
     text-align: center;
-    padding: 10px;
+    /*padding: 10px;*/
     bottom: 0;
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 p {

@@ -1,0 +1,34 @@
+.three-course-container {
+    text-align: center; /* Center the contents */
+}
+
+/* Style for the p tag */
+.three-course-duration {
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+.three-course-content {
+    white-space: pre-line;
+    font-size: 15px; /* Adjust the font size as needed */
+    /*margin-top: 5px; /* Add margin for spacing */
+    /*justify-content: left;*/
+
+}
+
+.three-course-content-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-item {
+    text-align: center;
+}
+
+.content-image {
+    width:  150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 25%;
+}

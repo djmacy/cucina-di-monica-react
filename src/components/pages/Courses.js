@@ -1,14 +1,9 @@
 import React from 'react';
 import backgroundImage from "../../images/MonicaTeaching.jpg";
 import Header from "../Header";
-import Slider from "../Slider"
 import CourseCard from "../CourseCard";
 import './Courses.css';
 
-//import images for rome menu
-import img1 from "../../images/MonicaTeaching.jpg";
-import img2 from "../../images/MonicaFavicon.png";
-import img3 from "../../images/MonicaSmiling.jpg";
 //Fall Menu Images
 import butternutSquashRavioli from "../../images/FallMenu/butternutSquashRavioli.png";
 import pumpkinAndCinnamonCake from "../../images/FallMenu/pumpkinAndCinnamonCake.png";
@@ -32,6 +27,10 @@ import maritozzi from "../../images/RomaMenu/maritozzi.png";
 import rigatoniAllAmatriciana from "../../images/RomaMenu/rigatoniAllAmatriciana.png";
 import saltimbocca from "../../images/RomaMenu/saltimbocca.png";
 import suppliAllaRomana from "../../images/RomaMenu/supplìAllaRomana.png";
+//SeasonalMenu Images
+import savoryBread from "../../images/SeasonalMenu/savoryBread.png";
+import lasagnaWithBaconAndBroccoli from "../../images/SeasonalMenu/lasagnaWithBaconAndBrocolli.png";
+import zeppoleDiSanGiusseppe from "../../images/SeasonalMenu/zeppoleDiSanGiuseppe.png";
 //Sicilian Menu Images
 import arancini from "../../images/SicilianMenu/arancini.png";
 import busiateWithTrapanese from "../../images/SicilianMenu/busiateWithTrapanesePesto.png";
@@ -66,6 +65,7 @@ const forestMenuImages = [gulaschAndPolenta, pappardelleWithPorciniMushrooms, ap
 const gnocchiMenuImages = [gnocchettiSardiWithArugulaPesto, gnocchiWithBeefRagu, rabatonAlessandrini, pannaCottaWithBerries];
 const monicasFavoriteMenuImages = [focaccia, casunziei, crostataDiMarmellata];
 const romeMenuImages= [suppliAllaRomana, rigatoniAllAmatriciana, saltimbocca, maritozzi];
+const seasonalMenuImages = [savoryBread, lasagnaWithBaconAndBroccoli, zeppoleDiSanGiusseppe];
 const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
 const springMenuImages = [savoryCroissant, crespelleWithCheeseAndSpinach, fruitAndCreamTart];
 const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
@@ -77,21 +77,135 @@ const Courses = () => {
         <div>
             <Header backgroundImage={backgroundImage} title="Courses"/>
             <div className="course-cards-container">
-                <CourseCard imageUrl={pumpkinBread} title="Fall Menu" id="Fall Card" imageArray={fallMenuImages}/>
-                <CourseCard imageUrl={appleStrudel} title="Forest Menu" id="Forest Menu" imageArray={forestMenuImages}/>
-                <CourseCard imageUrl={gnocchiWithBeefRagu} title="Gnocchi Menu" id="Gnocchi Menu" imageArray={gnocchiMenuImages}/>
-                <CourseCard imageUrl={focaccia} title="Monicas Favorite Menu" id="Monicas Favorite Menu" imageArray={monicasFavoriteMenuImages}/>
-                <CourseCard imageUrl={saltimbocca} title="Roma Menu" id="Roma Menu" imageArray={romeMenuImages}/>
-                <CourseCard imageUrl={cannoli} title="Sicilian Menu" id="Sicilian Menu" imageArray={sicilianMenuImages}/>
+                <CourseCard
+                    imageUrl={pumpkinBread}
+                    title="Fall Menu"
+                    id="Fall Card"
+                    imageArray={fallMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Pumpkin Bread"}
+                    firstCourse={"Pumpkin Flan"}
+                    secondCourse={"Butternut Squash Ravioli"}
+                    dessert={"Pumpkin and \nCinnamon Cake"}
+                />
+                <CourseCard
+                    imageUrl={appleStrudel}
+                    title="Forest Menu"
+                    id="Forest Menu"
+                    imageArray={forestMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Gulasch And Polenta"}
+                    firstCourse={"Pappardelle With \nPorcini Mushrooms"}
+                    dessert={"Apple Strudel"}
+                />
+                <CourseCard
+                    imageUrl={gnocchiWithBeefRagu}
+                    title="Gnocchi Menu"
+                    id="Gnocchi Menu"
+                    imageArray={gnocchiMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Gnocchetti Sardi \nWith Arugula Pesto"}
+                    firstCourse={"Gnocchi With Beef Ragù"}
+                    secondCourse={"Rabaton Alessandrini"}
+                    dessert={"Panna Cotta With Berries"}
+                />
+                <CourseCard
+                    imageUrl={focaccia}
+                    title="Monicas Favorite Menu"
+                    id="Monicas Favorite Menu"
+                    imageArray={monicasFavoriteMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Focaccia"}
+                    firstCourse={"Casunzei"}
+                    dessert={"Crostata With Marmalade"}
+                />
             </div>
             <div className="course-cards-container">
-                <CourseCard imageUrl={fruitAndCreamTart} title="Spring Menu" id="Spring Menu" imageArray={springMenuImages}/>
-                <CourseCard imageUrl={lasagneAllaBolognese} title="Taste of Italy Menu" id="Taste of Italy Menu" imageArray={tasteOfItalyMenuImages}/>
-                <CourseCard imageUrl={heartShapedFilledPasta} title="Thats Amore Menu" id="Thats Amore Menu" imageArray={thatsAmoreMenuImages}/>
-                <CourseCard imageUrl={spaghettiAllaChittara} title="Vegetarian Menu" id="Vegetarian Menu" imageArray={vegetarianMenuImages}/>
-                <CourseCard imageUrl={tiramisu} title="Veneto Menu" id="Veneto Menu" imageArray={venetoMenuImages}/>
+                <CourseCard
+                    imageUrl={maritozzi}
+                    title="Roma Menu"
+                    id="Roma Menu"
+                    imageArray={romeMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Supplì Alla Romana"}
+                    firstCourse={"Rigatoni all'Amatriciana"}
+                    secondCourse={"Saltimbocca"}
+                    dessert={"Maritozzi"}
+                />
+                <CourseCard
+                    imageUrl={cannoli}
+                    title="Sicilian Menu"
+                    id="Sicilian Menu"
+                    imageArray={sicilianMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Arancini"}
+                    firstCourse={"Busiate With Trapanese Pesto"}
+                    dessert={"Cannoli"}
+                />
+                <CourseCard
+                    imageUrl={fruitAndCreamTart}
+                    title="Spring Menu"
+                    id="Spring Menu"
+                    imageArray={springMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Savory Croissant"}
+                    firstCourse={"Crespelle With Cheese \nand Spinach"}
+                    dessert={"Fruit and Cream Tart"}
+                />
+                <CourseCard
+                    imageUrl={lasagneAllaBolognese}
+                    title="Taste of Italy Menu"
+                    id="Taste of Italy Menu"
+                    imageArray={tasteOfItalyMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Risotto Alla Milanese"}
+                    firstCourse={"Lasagna Alla Bolognese"}
+                    dessert={"Baci Di Dama"}
+                />
             </div>
-            {/*<Slider imageList={romeMenuImages} courseName="Rome Menu" />*/}
+            <div className="course-cards-container">
+                <CourseCard
+                    imageUrl={heartShapedFilledPasta}
+                    title="Thats Amore Menu"
+                    id="Thats Amore Menu"
+                    imageArray={thatsAmoreMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Danubio Salato"}
+                    firstCourse={"Heart-Shaped Filled Pasta"}
+                    secondCourse={"Eggplant Parmigiana"}
+                    dessert={"Strawberry Tiramisù"}
+                />
+                <CourseCard
+                    imageUrl={spaghettiAllaChittara}
+                    title="Vegetarian Menu"
+                    id="Vegetarian Menu"
+                    imageArray={vegetarianMenuImages}
+                    duration={"2 Hours"}
+                    appetizer="Pasta Alla Norma"
+                    firstCourse="Spaghetti Alla Chittara"
+                    dessert="Pistacchio Tiramisù"
+                />
+                <CourseCard
+                    imageUrl={tiramisu}
+                    title="Veneto Menu"
+                    id="Veneto Menu"
+                    imageArray={venetoMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Braided Bread With \nSorpressa and Asiago"}
+                    firstCourse="Bigoli With White Ragù"
+                    dessert={"Tiramisù"}
+                />
+                <CourseCard
+                    imageUrl={zeppoleDiSanGiusseppe}
+                    title="Seasonal Menu"
+                    id="Seasonal Menu"
+                    imageArray={seasonalMenuImages}
+                    duration={"2 Hours"}
+                    appetizer={"Savory Bread"}
+                    firstCourse={"Lasagna With Bacon \nand Broccoli"}
+                    dessert={"Zeppole di San Giuseppe"}
+                />
+            </div>
         </div>
     );
 };
