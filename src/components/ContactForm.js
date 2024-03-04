@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import './ContactForm.css';
+import React, { useState, useRef } from 'react';
+import "./ContactForm.css"
+import emailjs from '@emailjs/browser';
 
+const serviceId = 'service_x3wcoak';
 const ContactForm = () => {
-    // State to manage form data
+    const form = useRef();
+
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
         phone: '',
-        comments: '',
+        message: '',
+        course: ''
     });
 
-    // Handle form input changes
-    const handleInputChange = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -20,72 +22,66 @@ const ContactForm = () => {
         }));
     };
 
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
+        //logic here
+        emailjs
+            .sendForm(serviceId, 'template_tgdohai', form.current, {
+                publicKey: 'ltJZY1kdODXr96tLF',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
 
-        // Perform any additional validation if needed
-        // ...
-
-        // Display form data (you can replace this with your form submission logic)
-        console.log(formData);
+        console.log('Form data submitted:', formData);
     };
 
     return (
-        <div className="contact-form">
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="firstName">First Name:</label>
-                <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                />
-
-                <label htmlFor="lastName">Last Name:</label>
-                <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                />
-
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                />
-
-                <label htmlFor="phone">Phone Number:</label>
-                <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                />
-
-                <label htmlFor="comments">Comments:</label>
-                <textarea
-                    id="comments"
-                    name="comments"
-                    rows="4"
-                    value={formData.comments}
-                    onChange={handleInputChange}
-                    required
-                ></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <form ref={form} onSubmit={handleSubmit}>
+            <label>
+                Name:
+                <input type="text" name="name" value={formData.name} onChange={handleChange} />
+            </label>
+            <br />
+            <label>
+                Email:
+                <input type="email" name="email" value={formData.email} onChange={handleChange} />
+            </label>
+            <br />
+            <label>
+                Phone:
+                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+            </label>
+            <br />
+            <label>
+                Message:
+                <textarea name="message" value={formData.message} onChange={handleChange} />
+            </label>
+            <br />
+            <label>
+                Select Cooking Class:
+                <select name="course" value={formData.course} onChange={handleChange}>
+                    <option value="Fall Menu">Fall Menu</option>
+                    <option value="Forest Menu">Forest Menu</option>
+                    <option value="Gnocchi Menu">Gnocchi Menu</option>
+                    <option value="Roma Menu">Roma Menu</option>
+                    <option value="Seasonal Menu">Seasonal Menu</option>
+                    <option value="Sicilian Menu">Sicilian Menu</option>
+                    <option value="Spring Menu">Spring Menu</option>
+                    <option value="Taste of Italy Menu">Taste of Italy Menu</option>
+                    <option value="That's Amore Menu">That's Amore Menu</option>
+                    <option value="Vegetarian Menu">Vegetarian Menu</option>
+                    <option value="Veneto Menu">Veneto Menu</option>
+                </select>
+            </label>
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
     );
 };
 
