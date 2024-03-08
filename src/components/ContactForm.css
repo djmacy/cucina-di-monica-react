@@ -5,37 +5,105 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
+
 }
 
-/* Add more styles as needed */
-form {
-    margin-top: 50px;
+.contact-container {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
 
-.formRow {
-    margin: 10px 0 20px 0;
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
 }
 
-.formInput {
-    padding: 15px 10px;
+.contact-left-title h2 {
+    font-weight: 600;
+    color: #534d3e;
+    font-size: 40px;
+    margin-bottom: 5px;
 }
 
-.errorMessage {
-    color: #f45532;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-}
-
-.submit-btn {
-    padding: 15px 50px;
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #fdecbe;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.contact-left textarea{
+    height:140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-left select{
+    width: 430px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #534d3e;
+}
+
+.contact-inputs::placeholder {
+    color: #a9a9a9;
+    font-family: sans-serif;
+}
+
+.contact-left button {
+    display: flex;
+    alight-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #534d3e, #fdecbe);
+    cursor: pointer;
+}
+
+.contact-left button img {
+    hieght: 15px;
+}
+
+.contact-right img {
+    width: 500px;
 }
 
 @media (max-width: 768px) {
-    .submit-message {
-        width: 125px;
-        margin-left: 200px;
+    .contact-inputs {
+        width: 80vw;
+    }
+    .contact-left select {
+        width: 85.5vw;
+    }
+    .contact-right {
+        display: none;
     }
 }

@@ -3,6 +3,8 @@ import "./ContactForm.css"
 import emailjs from '@emailjs/browser';
 
 const serviceId = 'service_x3wcoak';
+const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
+const seoRegex = /SEO/i;
 const ContactForm = () => {
     const form = useRef();
 
@@ -11,7 +13,9 @@ const ContactForm = () => {
         email: '',
         phone: '',
         message: '',
-        course: ''
+        course: '',
+        time: '',
+        day: ''
     });
 
     const handleChange = (e) => {
@@ -22,50 +26,75 @@ const ContactForm = () => {
         }));
     };
 
+    function clearForm(message) {
+        alert(message);
+        form.current.reset();
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+            course: '',
+            time: '',
+            day: ''
+        });
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        //logic here
+
+
+        if (formData.message && urlRegex.test(formData.message)) {
+            // Display an alert or handle the case where a URL is found in the message
+            clearForm('Not interested... Sell that elsewhere.');
+            return; // exit the function
+        }
+        if (formData.message && seoRegex.test(formData.message)) {
+            // Display an alert or handle the case where "SEO" is found in the message
+            clearForm('Nice try. My Validation is superior to your bot :)');
+            return; // exit the function
+        }
+
         emailjs
             .sendForm(serviceId, 'template_tgdohai', form.current, {
                 publicKey: 'ltJZY1kdODXr96tLF',
             })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    clearForm('SUCCESS! Monica will get back to you as soon as possible');
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    clearForm('FAILED...', error.text);
                 },
             );
 
-        console.log('Form data submitted:', formData);
+        //console.log('Form data submitted:', formData);
     };
 
     return (
-        <form ref={form} onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            </label>
-            <br />
-            <label>
-                Email:
-                <input type="email" name="email" value={formData.email} onChange={handleChange} />
-            </label>
-            <br />
-            <label>
-                Phone:
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
-            </label>
-            <br />
-            <label>
-                Message:
-                <textarea name="message" value={formData.message} onChange={handleChange} />
-            </label>
-            <br />
-            <label>
-                Select Cooking Class:
-                <select name="course" value={formData.course} onChange={handleChange}>
+        <div className="contact-container">
+            <form className="contact-left" ref={form} onSubmit={handleSubmit}>
+                <div className="contact-title">
+                    <h2>Get in touch</h2>
+                    <hr/>
+                </div>
+                <input type="text" name="name" placeholder="Your Name" className="contact-inputs" value={formData.name} onChange={handleChange} required />
+                <input type="email" name="email" placeholder="Your Email" className="contact-inputs" value={formData.email} onChange={handleChange} required />
+                <input type="tel" name="phone" placeholder="Your Phone" className="contact-inputs" value={formData.phone} onChange={handleChange} />
+                <select name="time" placeholder="Select a time" className="contact-inputs" value={formData.time} onChange={handleChange}>
+                    <option value="Morning">Morning</option>
+                    <option value="Evening">Evening</option>
+                </select>
+                <select name="day" placeholder="Select a day" className="contact-inputs" value={formData.day} onChange={handleChange}>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                <select name="course" placeholder="Select a course" className="contact-inputs" value={formData.course} onChange={handleChange}>
                     <option value="Fall Menu">Fall Menu</option>
                     <option value="Forest Menu">Forest Menu</option>
                     <option value="Gnocchi Menu">Gnocchi Menu</option>
@@ -78,11 +107,17 @@ const ContactForm = () => {
                     <option value="Vegetarian Menu">Vegetarian Menu</option>
                     <option value="Veneto Menu">Veneto Menu</option>
                 </select>
-            </label>
-            <br/>
-            <button type="submit">Submit</button>
-        </form>
+
+                <textarea name="message" placeholder="Your Message" className="contact-inputs" value={formData.message} onChange={handleChange} required />
+                <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
+            </form>
+            <div className="contact-right">
+                {/*<img src="/assets/right_img.png" alt="" */}
+
+            </div>
+        </div>
     );
+
 };
 
 export default ContactForm;
