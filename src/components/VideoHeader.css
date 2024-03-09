@@ -1,0 +1,25 @@
+/* VideoHeader.css */
+.video-header-container {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-title {
+    font-family: 'Tahoma', sans-serif; /* Use your desired cursive font */
+    font-size: 3em; /* Adjust the font size as needed */
+    margin-bottom: 20px;
+}

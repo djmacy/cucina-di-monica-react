@@ -1,12 +1,13 @@
 import React from 'react';
-import Header from '../Header';
-import backgroundImage from '../../images/MonicaTeaching.jpg';
-
+import VideoHeader from '../VideoHeader';
+import HomeCookingClasses from "../HomeCookingClasses";
+import backgroundVideo from '../../videos/videoHeader.mp4';
 
 const Home = () => {
     return (
         <div>
-            <Header title="La Cucina Di Monica" backgroundImage={backgroundImage} />
+            <VideoHeader title=/*"La Cucina Di Monica"*/"" videoSource={backgroundVideo} />
+            <HomeCookingClasses/>
         </div>
     );
 };
