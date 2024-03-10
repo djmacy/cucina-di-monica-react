@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import "./ContactForm.css"
 import emailjs from '@emailjs/browser';
+import Select from 'react-select';
 
 const serviceId = 'service_x3wcoak';
 const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
@@ -17,6 +18,12 @@ const ContactForm = () => {
         time: '',
         day: ''
     });
+
+    const cookingClasses = [
+        {label: "option1", value: 1},
+        {label: "option2", value: 2},
+        {label: "option3", value: 3}
+    ]
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -107,6 +114,7 @@ const ContactForm = () => {
                     <option value="Vegetarian Menu">Vegetarian Menu</option>
                     <option value="Veneto Menu">Veneto Menu</option>
                 </select>
+                <Select defaultValue="" isMulti name="colors " options={cookingClasses} className="contact-inputs" classNamePrefix="select"/>
 
                 <textarea name="message" placeholder="Your Message" className="contact-inputs" value={formData.message} onChange={handleChange} required />
                 <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
