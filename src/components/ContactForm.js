@@ -6,6 +6,7 @@ import Select from 'react-select';
 const serviceId = 'service_x3wcoak';
 const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
 const seoRegex = /SEO/i;
+const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 const ContactForm = () => {
     const form = useRef();
 
@@ -14,18 +15,77 @@ const ContactForm = () => {
         email: '',
         phone: '',
         message: '',
-        course: '',
         time: '',
-        day: ''
+        day: '',
+        course: ''
     });
 
     const cookingClasses = [
-        {label: "option1", value: 1},
-        {label: "option2", value: 2},
-        {label: "option3", value: 3}
+        {label: "Fall Menu", value: "Fall Menu"},
+        {label: "Gnocchi Menu", value: "Gnocchi Menu"},
+        {label: "Roma Menu", value: "Roma Menu"},
+        {label: "Seasonal Menu", value: "Seasonal Menu"},
+        {label: "Sicilian Menu", value: "Sicilian Menu"},
+        {label: "Spring Menu", value: "Spring Menu"},
+        {label: "Taste of Italy Menu", value: "Taste of Italy Menu"},
+        {label: "That's Amore Menu", value: "That's Amore Menu"},
+        {label: "Vegetarian Menu", value: "Vegetarian Menu"},
+        {label: "Veneto Menu", value: "Veneto Menu"}
     ]
 
+    const days = [
+        {label: "Monday", value: "Monday"},
+        {label: "Tuesday", value: "Tuesday"},
+        {label: "Wednesday", value: "Wednesday"},
+        {label: "Thursday", value: "Thursday"},
+        {label: "Friday", value: "Friday"},
+        {label: "Saturday", value: "Saturday"},
+        {label: "Sunday", value: "Sunday"}
+    ]
+
+    const times = [
+        {label: "Morning", value: "Morning"},
+        {label: "Evening", value: "Evening"}
+    ]
+
+    const coursesChange = (selectedOptions) => {
+        const selectedValues = selectedOptions ? selectedOptions.map(option => option.value) : [];
+
+        setFormData((prevData) => ({
+            ...prevData,
+            course: selectedValues.join(', '),
+            //day: selectedValues.join(', '),
+           // time: selectedValues.join(', ')
+        }));
+       // console.log(formData.course);
+       // console.log(formData.time);
+       // console.log(formData.day);
+    };
+
+    const daysChange = (selectedOptions) => {
+        const selectedValues = selectedOptions ? selectedOptions.map(option => option.value) : [];
+
+        setFormData((prevData) => ({
+            ...prevData,
+
+            day: selectedValues.join(', '),
+            // time: selectedValues.join(', ')
+        }));
+        //console.log(formData.day);
+    };
+
+    const timesChange = (selectedOptions) => {
+        const selectedValues = selectedOptions ? selectedOptions.map(option => option.value) : [];
+
+        setFormData((prevData) => ({
+            ...prevData,
+            time: selectedValues.join(', ')
+        }));
+       // console.log(formData.time);
+    };
+
     const handleChange = (e) => {
+       // console.log(e.target)
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -40,17 +100,26 @@ const ContactForm = () => {
             name: '',
             email: '',
             phone: '',
-            message: '',
-            course: '',
             time: '',
-            day: ''
+            day: '',
+            course: ''
         });
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-
+        const phone = document.getElementById("phone");
+        console.log(formData.phone);
+        if (formData.phone && !phoneRegex.test(formData.phone)) {
+            phone.setCustomValidity("Please enter a valid phone number")
+            phone.reportValidity();
+            return;
+        } else {
+            phone.setCustomValidity("");
+            phone.reportValidity();
+        }
+        console.log(formData.phone + " success");
+        return;
         if (formData.message && urlRegex.test(formData.message)) {
             // Display an alert or handle the case where a URL is found in the message
             clearForm('Not interested... Sell that elsewhere.');
@@ -75,7 +144,7 @@ const ContactForm = () => {
                 },
             );
 
-        //console.log('Form data submitted:', formData);
+        console.log('Form data submitted:', formData);
     };
 
     return (
@@ -87,34 +156,40 @@ const ContactForm = () => {
                 </div>
                 <input type="text" name="name" placeholder="Your Name" className="contact-inputs" value={formData.name} onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Your Email" className="contact-inputs" value={formData.email} onChange={handleChange} required />
-                <input type="tel" name="phone" placeholder="Your Phone" className="contact-inputs" value={formData.phone} onChange={handleChange} />
-                <select name="time" placeholder="Select a time" className="contact-inputs" value={formData.time} onChange={handleChange}>
-                    <option value="Morning">Morning</option>
-                    <option value="Evening">Evening</option>
-                </select>
-                <select name="day" placeholder="Select a day" className="contact-inputs" value={formData.day} onChange={handleChange}>
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                    <option value="Sunday">Sunday</option>
-                </select>
-                <select name="course" placeholder="Select a course" className="contact-inputs" value={formData.course} onChange={handleChange}>
-                    <option value="Fall Menu">Fall Menu</option>
-                    <option value="Forest Menu">Forest Menu</option>
-                    <option value="Gnocchi Menu">Gnocchi Menu</option>
-                    <option value="Roma Menu">Roma Menu</option>
-                    <option value="Seasonal Menu">Seasonal Menu</option>
-                    <option value="Sicilian Menu">Sicilian Menu</option>
-                    <option value="Spring Menu">Spring Menu</option>
-                    <option value="Taste of Italy Menu">Taste of Italy Menu</option>
-                    <option value="That's Amore Menu">That's Amore Menu</option>
-                    <option value="Vegetarian Menu">Vegetarian Menu</option>
-                    <option value="Veneto Menu">Veneto Menu</option>
-                </select>
-                <Select defaultValue="" isMulti name="colors " options={cookingClasses} className="contact-inputs" classNamePrefix="select"/>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone" className="contact-inputs" value={formData.phone} onChange={handleChange} />
+
+                <Select
+                    isMulti
+                    menuPlacement="auto"
+                    menuPosition="fixed"
+                    name="day"
+                    placeholder="Select Days"
+                    options={days}
+                    className="contact-select"
+                    classNamePrefix="select"
+                    value={days.filter(option => formData.day.includes(option.value))}
+                    onChange={daysChange}
+                />
+                <Select
+                    isMulti
+                    name="time"
+                    placeholder="Select Times"
+                    options={times}
+                    className="contact-select"
+                    classNamePrefix="select"
+                    value={times.filter(option => formData.time.includes(option.value))}
+                    onChange={timesChange}
+                />
+                <Select
+                    isMulti
+                    name="course"
+                    placeholder="Select Courses"
+                    options={cookingClasses}
+                    className="contact-select"
+                    classNamePrefix="select"
+                    value={cookingClasses.filter(option => formData.course.includes(option.value))}
+                    onChange={coursesChange}
+                />
 
                 <textarea name="message" placeholder="Your Message" className="contact-inputs" value={formData.message} onChange={handleChange} required />
                 <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
