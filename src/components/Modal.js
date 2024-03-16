@@ -1,8 +1,18 @@
 // Modal.js
 import React, {useEffect} from 'react';
 import './Modal.css'; // Create a CSS file for styling
+import { useNavigate } from 'react-router-dom';
 
 const Modal = ({isOpen, onClose, children, id}) => {
+    const navigate = useNavigate();
+
+    const handleDiscoverMoreClick = () => {
+        // Handle redirection logic or link to another page
+        handleClose();
+        navigate('/contact');
+        window.scrollTo(0, 0);
+    };
+
     //will need to make this dynamic. Pass it as a parameter
     const cardElement = document.getElementById(id); // Replace with the actual ID or reference to your card element
     if (cardElement) {
@@ -43,6 +53,9 @@ const Modal = ({isOpen, onClose, children, id}) => {
                     X
                 </button>
                 {children}
+                <h3 className='discover-more' onClick={handleDiscoverMoreClick}>
+                    Contact Me
+                </h3>
             </div>
         </div>
     );
