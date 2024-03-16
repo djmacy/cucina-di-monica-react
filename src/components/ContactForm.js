@@ -9,7 +9,7 @@ const seoRegex = /SEO/i;
 const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 const ContactForm = () => {
     const form = useRef();
-
+    const [phoneNumberValidity, setPhoneNumberValidity] = useState(true);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -84,15 +84,6 @@ const ContactForm = () => {
        // console.log(formData.time);
     };
 
-    const handleChange = (e) => {
-       // console.log(e.target)
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
-
     function clearForm(message) {
         alert(message);
         form.current.reset();
@@ -106,20 +97,36 @@ const ContactForm = () => {
         });
     }
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        const input = e.target;
+        // Update form data
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+
+        // Validate phone number separately
+        if (name === "phone") {
+            if (!value.match(phoneRegex)) {
+                input.setCustomValidity("Phone number is invalid")
+            } else {
+                input.setCustomValidity("");
+            }
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        const phone = document.getElementById("phone");
-        console.log(formData.phone);
-        if (formData.phone && !phoneRegex.test(formData.phone)) {
-            phone.setCustomValidity("Please enter a valid phone number")
-            phone.reportValidity();
+/*
+        if (!phoneNumberValidity) {
+            console.log("Phone number is invalid");
             return;
-        } else {
-            phone.setCustomValidity("");
-            phone.reportValidity();
         }
+
+ */
         console.log(formData.phone + " success");
-        return;
+
         if (formData.message && urlRegex.test(formData.message)) {
             // Display an alert or handle the case where a URL is found in the message
             clearForm('Not interested... Sell that elsewhere.');
@@ -145,6 +152,7 @@ const ContactForm = () => {
             );
 
         console.log('Form data submitted:', formData);
+
     };
 
     return (
@@ -152,7 +160,6 @@ const ContactForm = () => {
             <form className="contact-left" ref={form} onSubmit={handleSubmit}>
                 <div className="contact-title">
                     <h2>Get in touch</h2>
-                    <hr/>
                 </div>
                 <input type="text" name="name" placeholder="Your Name" className="contact-inputs" value={formData.name} onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Your Email" className="contact-inputs" value={formData.email} onChange={handleChange} required />

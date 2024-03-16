@@ -32,20 +32,12 @@
     margin-bottom: 5px;
 }
 
-.contact-left-title hr{
-    border: none;
-    width: 120px;
-    height: 5px;
-    background-color: #fdecbe;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
 
 .contact-inputs {
     width: 400px;
     height: 35px;
-    border: #666666;
-    outline: #666666;
+    border: 1px solid #cccccc;
+    outline: none;
     padding-left: 10px;
     font-weight: 500;
     color: black;
@@ -61,7 +53,7 @@
     outline: #666666;
     /*padding-left: 25px;*/
     font-weight: 500;
-    color: #121227;
+    /*color: #121227;*/
     border-radius: 5px;
 }
 
@@ -69,7 +61,7 @@
     height: 140px;
     width: 100%;
     padding-top: 15px;
-    border-radius: 20px;
+    border-radius: 5px;
     max-width: 400px;
     max-height: 400px;
     min-width: 400px;
@@ -81,7 +73,7 @@
 }
 
 .contact-inputs::placeholder {
-    color: #666666;
+    color: #808080;
     font-family: "Times New Roman";
     font-size: 16px;
    /* padding-left: 10px;*/

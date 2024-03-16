@@ -1,12 +1,12 @@
 import React from 'react';
+import Accordion from "../Accordion";
 
-const About = () => {
+const FAQ = () => {
     return (
         <div>
-            <h2>About Us</h2>
-            <p>Welcome to our About page. Here you can learn more about our company or organization.</p>
+            <Accordion/>
         </div>
     );
 };
 
-export default About;
+export default FAQ;
