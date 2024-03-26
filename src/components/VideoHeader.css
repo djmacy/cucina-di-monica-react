@@ -1,11 +1,14 @@
 /* VideoHeader.css */
 .video-header-container {
-    color: #fff;
+    margin-top: 100px;
+    color: #000000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Qwitcher Grypen", cursive;
+    font-style: normal;
 }
 
 .video-background {
@@ -19,7 +22,20 @@
 }
 
 .header-title {
-    font-family: 'Tahoma', sans-serif; /* Use your desired cursive font */
-    font-size: 3em; /* Adjust the font size as needed */
-    margin-bottom: 20px;
+    font-size: 4em; /* Adjust the font size as needed */
+    /*margin-bottom: 20px;*/
+}
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+   } to {
+        opacity: 1;
+   }
+}
+
+.ending-image {
+    margin-top: 100px;
+   height: 100%;
+    opacity: 0; /* Initially set opacity to 0 */
+   animation: fadeIn 2.0s ease-in-out forwards; /* Apply animation */
 }

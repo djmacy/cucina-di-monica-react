@@ -1,19 +1,45 @@
 /* Logo.css */
 .logo {
-    /*margin-right: 10px;*/
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Vertically align items */
+}
+
+.logo-below {
+    margin-top: 100px;
+    height: 100%;
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeIn 2.0s ease-in-out forwards; /* Apply animation */
+    justify-content: center;
+    text-align: center;
+}
+
+.h2-below {
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.h2-right {
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: 20px;
+    z-index: 100;
 }
 
 .logo img {
-    width: auto;
-    height: 100px;
-    margin-right: 50px;
-    margin-top: auto;
-    margin-bottom: -5px;
+    width: 60px;
+    height: 100%;
+    padding: 10px;
 }
 
 .logo a {
     text-decoration: none;
-    color: white;
-    padding: 10px; /* Add padding for better clickability */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    color: black;
+    /*padding: 10px; /* Add padding for better clickability */
+  /*  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }

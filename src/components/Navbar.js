@@ -3,6 +3,7 @@ import './Navbar.css';
 import Logo from './Logo';
 
 const Navbar = () => {
+    /*
     useEffect(() => {
         // Add event listener to track scroll position and update navbar opacity
         const handleScroll = () => {
@@ -22,10 +23,10 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+*/
     return (
         <nav>
-            <Logo />
+            <Logo below={false}/>
             <ul className="navbar-link">
                 <li><a href="/">Home</a></li>
                 <li><a href='/courses'>Classes</a></li>

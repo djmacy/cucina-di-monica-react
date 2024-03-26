@@ -7,7 +7,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(253, 236, 190, 0.3); /* Set initial background with alpha 0 */
+   background-color: #fdecbe;
+    /* background-color: rgba(253, 236, 190, 0.3); /* Set initial background with alpha 0 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
     transition: background-color 1s ease; /* Add transition effect for smooth change */
     z-index: 1000;

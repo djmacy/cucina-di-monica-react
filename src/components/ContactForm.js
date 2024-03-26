@@ -10,7 +10,6 @@ const seoRegex = /SEO/i;
 const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 const ContactForm = () => {
     const form = useRef();
-    const [phoneNumberValidity, setPhoneNumberValidity] = useState(true);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -110,7 +109,7 @@ const ContactForm = () => {
         // Validate phone number separately
         if (name === "phone") {
             if (!value.match(phoneRegex)) {
-                input.setCustomValidity("Phone number is invalid")
+                input.setCustomValidity("Insert in 123-456-7890 format")
             } else {
                 input.setCustomValidity("");
             }
@@ -119,13 +118,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-/*
-        if (!phoneNumberValidity) {
-            console.log("Phone number is invalid");
-            return;
-        }
 
- */
         console.log(formData.phone + " success");
 
         if (formData.message && urlRegex.test(formData.message)) {

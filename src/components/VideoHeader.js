@@ -1,13 +1,20 @@
 // VideoHeader.js
 import React, { useState, useEffect } from 'react';
 import './VideoHeader.css';
+import Logo from './Logo.js'
 
-const VideoHeader = ({ title, videoSource }) => {
+const VideoHeader = ({ title, videoSource, endingImage }) => {
     const [isLoaded, setIsLoaded] = useState(false);
+    const [videoEnded, setVideoEnded] = useState(false);
 
     useEffect(() => {
-        setIsLoaded(true);
-    }, []);
+        if (videoEnded) {
+            document.querySelector('.video-header-container').style.backgroundColor = "#fdecbe";
+        }
+    }, [videoEnded]);
+    const handleVideoEnd = () => {
+        setVideoEnded(true);
+    };
 
     const videoHeaderStyle = {
         position: 'relative',
@@ -18,11 +25,13 @@ const VideoHeader = ({ title, videoSource }) => {
 
     return (
         <header className='video-header-container' style={videoHeaderStyle}>
-            <video className='video-background' autoPlay /*loop*/ muted onLoadedData={() => setIsLoaded(true)}>
+            <video className='video-background' autoPlay /*loop*/ muted onLoadedData={() => setIsLoaded(true)} onEnded={handleVideoEnd}>
                 <source src={videoSource} type='video/mp4' />
                 Your browser does not support the video tag.
             </video>
-            <h1 className='header-title'>{title}</h1>
+            {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+            {videoEnded && <Logo below={true} className={"ending-image"}/> }
+
             {/* Add other elements as needed */}
         </header>
     );
