@@ -27,7 +27,7 @@ const Navbar = () => {
 
 */
     const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
-    const [menu_class, setMenuClass] = useState("menu hidden")
+    const [menu_class, setMenuClass] = useState("menu")
     const [isMenuClicked, setIsMenuClicked] = useState(false)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Initialize with current window width
 
