@@ -29,6 +29,30 @@ const Navbar = () => {
     const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
     const [menu_class, setMenuClass] = useState("menu hidden")
     const [isMenuClicked, setIsMenuClicked] = useState(false)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Initialize with current window width
+
+    // Function to handle window resize
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth); // Update window width state
+
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    // Update menu visibility based on window width
+    useEffect(() => {
+        if (windowWidth > 768) {
+            setMenuClass("menu hidden");
+        }
+    }, [windowWidth]);
+
     const updateMenu = () => {
         if (!isMenuClicked) {
             setBurgerClass("burger-bar clicked")
@@ -39,14 +63,13 @@ const Navbar = () => {
         }
         setIsMenuClicked(!isMenuClicked);
     }
-    if (1 + 1 == 3) {
+    if (window.innerWidth > 850) {
         return (
             <nav>
                 <Logo below={false}/>
                 <ul className="navbar-link">
                     <li><a href="/">Home</a></li>
                     <li><a href='/courses'>Courses</a></li>
-                    {/*<li><a href='#'>Equipment</a></li>*/}
                     <li><a href='/faq'>FAQ</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
@@ -56,14 +79,21 @@ const Navbar = () => {
         return (
             <div>
                 <nav>
+                    <Logo below={false}/>
                     <div className="burger-menu" onClick={updateMenu}>
                         <div className={burger_class} ></div>
                         <div className={burger_class} ></div>
                         <div className={burger_class} ></div>
                     </div>
+
                 </nav>
             <div className={menu_class}>
-
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href='/courses'>Courses</a></li>
+                    <li><a href='/faq'>FAQ</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
             </div>
             </div>
         )
