@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react';
 import "./ContactForm.css"
 import emailjs from '@emailjs/browser';
 import Select from 'react-select';
-import logo from '../images/MonicaFavicon.png'
+import logo from '../images/Tiramisu.jpeg'
+import Logo from '../components/Logo';
 
 const serviceId = 'service_x3wcoak';
 const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
@@ -91,6 +92,7 @@ const ContactForm = () => {
             name: '',
             email: '',
             phone: '',
+            message: '',
             time: '',
             day: '',
             course: ''
@@ -196,6 +198,7 @@ const ContactForm = () => {
                 <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
             </form>
             <div className="contact-right">
+                {/* <Logo below={true}/>*/}
                 <img src={logo} alt="logo" />
             </div>
         </div>

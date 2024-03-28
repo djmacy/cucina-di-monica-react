@@ -29,7 +29,7 @@ const Navbar = () => {
             <Logo below={false}/>
             <ul className="navbar-link">
                 <li><a href="/">Home</a></li>
-                <li><a href='/courses'>Classes</a></li>
+                <li><a href='/courses'>Courses</a></li>
                 {/*<li><a href='#'>Equipment</a></li>*/}
                 <li><a href='/faq'>FAQ</a></li>
                 <li><a href="/contact">Contact</a></li>
