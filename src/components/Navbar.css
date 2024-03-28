@@ -4,10 +4,11 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   background-color: #fdecbe;
+    background-color: #fdecbe;
     /* background-color: rgba(253, 236, 190, 0.3); /* Set initial background with alpha 0 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
     transition: background-color 1s ease; /* Add transition effect for smooth change */
@@ -52,7 +53,7 @@ li {
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: #000;  /* Set your desired line color */
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
@@ -66,24 +67,89 @@ li {
     left: 0;
 }
 
-
-/*
-.discover-more::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #000;  /* Set your desired line color
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+.burger-menu {
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
 }
-*/
-/*.discover-more:hover {*/
-/*    color: #000;  !* Set your desired hover color *!*/
-/*}*/
 
-/*.discover-more:hover::after {*/
-/*    width: 100%;*/
-/*    left: 0;*/
-/*}*/
+.burger-bar {
+    margin-left: 5px;
+    width: 4em;
+    height: 0.5em;
+    background-color: #534d3e;
+    border-radius: 0.5em;
+}
+
+.menu {
+    width: 50%;
+    height: 100%;
+    background-color: #534d3e;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+}
+
+@keyframes slideInRight {
+    from {
+        left: -100%; /* Start position off the screen to the left */
+    }
+    to {
+        left: 0; /* End position at the left edge of the screen */
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        left: 0; /* Start position off the screen to the left */
+    }
+    to {
+        left: -100%; /* End position at the left edge of the screen */
+    }
+}
+
+.hidden {
+    /*display: none;*/
+    animation: slideInLeft 0.5s forwards; /* Apply animation */
+
+}
+
+.visible {
+    display: inherit;
+    animation: slideInRight 0.5s forwards; /* Apply animation */
+}
+
+.burger-bar.clicked:nth-child(1) {
+    transform: rotate(45deg) translate(0.75em, 1.25em);
+    transition: ease-out 0.5s;
+
+}
+
+.burger-bar.clicked:nth-child(2) {
+    transform: scale(0.01);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar:nth-child(1) {
+    margin-top: 26px;
+}
+
+.burger-bar:nth-child(3) {
+    margin-bottom: 26px;
+}
+
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
