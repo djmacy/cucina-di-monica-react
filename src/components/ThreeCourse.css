@@ -17,18 +17,39 @@
 }
 
 .three-course-content-container {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
 }
 
 .content-item {
     text-align: center;
+    width: 200px;
 }
 
 .content-image {
-    width:  150px;
-    height: 100px;
+    width:  100px;
+    height: 75px;
     object-fit: cover;
     border-radius: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-image {
+        width: 100px;
+        height: 75px;
+    }
+
+    .three-course-content {
+        font-size: 13px;
+    }
+
+    .three-course-content-container {
+        margin-top: 30px;
+    }
+    .container {
+        margin-bottom: 5px;
+    }
+
+
 }

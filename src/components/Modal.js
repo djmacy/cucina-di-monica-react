@@ -53,9 +53,9 @@ const Modal = ({isOpen, onClose, children, id}) => {
                     X
                 </button>
                 {children}
-                <h3 className='discover-more' onClick={handleDiscoverMoreClick}>
+                <h2 className='contact-more' onClick={handleDiscoverMoreClick}>
                     Contact Me
-                </h3>
+                </h2>
             </div>
         </div>
     );

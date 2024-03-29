@@ -46,6 +46,7 @@
 }
 
 .modal-content {
+
     width: 90%;
     height: 85vh;
     background-color: #fdecbe;
@@ -72,16 +73,22 @@
     font-size: 18px;
 }
 
-.discover-more {
+.contact-more {
+    font-family: "Qwitcher Grypen", cursive;
+    font-style: normal;
+
     display: inline-block;
     font-size: 2.0em;
+    position: relative;
+
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: color 0.3s, border-bottom 0.3s ease-in-out;
     text-align: center;
+    margin: 5px;
 }
 
-.discover-more::after {
+.contact-more::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -92,11 +99,11 @@
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-.discover-more:hover {
+.contact-more:hover {
     color: #000;  /* Set your desired hover color */
 }
 
-.discover-more:hover::after {
+.contact-more:hover::after {
     width: 100%;
     left: 0;
 }

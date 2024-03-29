@@ -2,6 +2,7 @@
 .logo {
     display: flex; /* Use flexbox layout */
     align-items: center; /* Vertically align items */
+    height: 100%;
 }
 
 .logo-below {
@@ -26,7 +27,7 @@
     font-family: "Qwitcher Grypen", cursive;
     font-weight: 800;
     font-style: normal;
-    font-size: 40px;
+    font-size: 46px;
     margin-left: 20px;
     z-index: 100;
 }

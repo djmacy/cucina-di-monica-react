@@ -50,7 +50,7 @@ const CourseCard = ({ title, imageUrl, id, imageArray, duration, appetizer, firs
             onClick={openModal}
         >
             <img src={imageUrl} alt={title} className="course-image" />
-            <h3 className="course-title">{title}</h3>
+            <h3 className="course-card-title">{title}</h3>
             <Modal id={id} isOpen={isModalOpen} onClose={closeModal}>
                 <ThreeCourse imageList={imageArray} title={title} duration={duration} appetizer={appetizer} firstCourse={firstCourse} secondCourse={secondCourse} dessert={dessert} />
             </Modal>

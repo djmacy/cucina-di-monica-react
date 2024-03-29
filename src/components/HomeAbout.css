@@ -70,7 +70,22 @@
 }
 
 .about-text-container p {
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
+    font-size: 20px;
     font-weight: 400;
     color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-text-container p {
+        font-size: 15px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-image-container {
+        max-width: 0;
+    }
 }
