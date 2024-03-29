@@ -28,11 +28,18 @@
 }
 
 .content-image {
-    width:  100px;
+    width:  100%;
     height: 75px;
     object-fit: cover;
-    border-radius: 25%;
+    border-radius: 10%;
 }
+
+.four-course-content-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
 
 @media only screen and (max-width: 768px) {
     .content-image {
@@ -47,9 +54,18 @@
     .three-course-content-container {
         margin-top: 30px;
     }
+
+    .four-course-content-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
     .container {
         margin-bottom: 5px;
     }
-
+    .three-course-container {
+        margin-top: 1px;
+    }
 
 }
