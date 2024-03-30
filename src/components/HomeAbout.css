@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 60px;
+    text-align: justify;
 }
 .home-about-container::before {
     content: '';
@@ -80,8 +81,6 @@
     .about-text-container p {
         font-size: 15px;
     }
-
-
 }
 
 @media only screen and (max-width: 1200px) {
