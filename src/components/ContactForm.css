@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    width: 500px;
 }
 
 .contact-left-title h2 {
@@ -32,24 +33,34 @@
     margin-bottom: 5px;
 }
 
-
 .contact-inputs {
-    width: 400px;
+    width: 99%;
     height: 35px;
     border: 1px solid #cccccc;
     outline: none;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
+
     font-weight: 500;
     color: black;
     border-radius: 5px;
-    font-family: "Times New Roman", Serif;
+    font-family: "Times New Roman", serif;
     font-size: 18px;
+}
+
+.contact-title {
+    font-family: "Qwitcher Grypen", cursive;
+    font-size: 35px;
+}
+
+.contact-title h2{
+    margin: 10px;
 }
 
 .contact-select {
     width: 100%;
-    max-width: 415px;
+    /*max-width: 415px;*/
     height: 100%;
+
     max-height: 500px;
     border: #666666;
     outline: #666666;
@@ -61,14 +72,14 @@
 
 .contact-left textarea{
     height: 140px;
-    width: 100%;
+    width: 99%;
     padding-top: 15px;
     border-radius: 5px;
-    max-width: 400px;
+    /*max-width: 400px;*/
     max-height: 400px;
-    min-width: 400px;
-    min-height: 140px;
     z-index: 0;
+    resize: none;
+
 }
 
 .contact-inputs:focus {
@@ -103,14 +114,40 @@
     width: 500px;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1100px) {
     .contact-inputs {
-        width: 80vw;
+        width: 500px;
     }
     .contact-left select {
         width: 85.5vw;
     }
     .contact-right {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .contact-left {
+        width: 85vw;
+    }
+    .contact-inputs {
+        width: 84.0vw;
+    }
+
+    .contact-left select {
+        width: 84.0vw;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .contact-left {
+        width: 85vw;
+    }
+    .contact-inputs {
+        width: 84.0vw;
+    }
+
+    .contact-left select {
+        width: 84.0vw;
     }
 }
