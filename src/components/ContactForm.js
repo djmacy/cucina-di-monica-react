@@ -5,7 +5,10 @@ import Select from 'react-select';
 import logo from '../images/Tiramisu.jpeg'
 import Logo from '../components/Logo';
 
-const serviceId = 'service_x3wcoak';
+const serviceId = process.env.REACT_APP_SERVICE_ID;
+const templateId = process.env.REACT_APP_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
 const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
 const seoRegex = /SEO/i;
 const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
@@ -135,8 +138,8 @@ const ContactForm = () => {
         }
 
         emailjs
-            .sendForm(serviceId, 'template_tgdohai', form.current, {
-                publicKey: 'ltJZY1kdODXr96tLF',
+            .sendForm(serviceId, templateId, form.current, {
+                publicKey: publicKey,
             })
             .then(
                 () => {
