@@ -65,3 +65,13 @@
         justify-content: center;
     }
 }
+
+@media only screen and (max-width: 360px) {
+    .course-card {
+        height: 190px;
+    }
+    .course-card-title {
+        height: 45px;
+        display: flex;
+    }
+}

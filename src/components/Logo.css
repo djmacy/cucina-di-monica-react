@@ -44,3 +44,47 @@
     /*padding: 10px; /* Add padding for better clickability */
   /*  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+@media only screen and (max-width: 500px) {
+    .h2-right {
+        font-family: "Qwitcher Grypen", cursive;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 30px;
+        margin-left: 20px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .h2-right {
+        font-family: "Qwitcher Grypen", cursive;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25px;
+        margin-left: 0px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .h2-right {
+        font-family: "Qwitcher Grypen", cursive;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 20px;
+        margin-left: 0px;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width: 295px) {
+    .h2-right {
+        font-family: "Qwitcher Grypen", cursive;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 15px;
+        margin-left: 0px;
+        z-index: 100;
+    }
+}
