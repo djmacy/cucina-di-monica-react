@@ -57,8 +57,8 @@
        align-items: center;
         justify-content: center;
     }
-    .course-card-title {
 
+    .course-card-title {
         height: 50px;
         display: flex;
         flex-direction: column;
@@ -70,6 +70,7 @@
     .course-card {
         height: 190px;
     }
+
     .course-card-title {
         height: 45px;
         display: flex;

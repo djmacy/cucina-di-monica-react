@@ -1,8 +1,8 @@
 /* Header.css */
 .header-container {
     margin-top: 75px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* Add a subtle text shadow */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 .header-title {
-    font-family: 'Tahoma ', sans-serif; /* Use your desired cursive font */
-    font-size: 3em; /* Adjust the font size as needed */
+    font-family: "Licorice", cursive;
+    font-size: 5em; /* Adjust the font size as needed */
     margin-bottom: 20px;
 }

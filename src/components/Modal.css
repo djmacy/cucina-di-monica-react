@@ -74,13 +74,11 @@
 }
 
 .contact-more {
-    font-family: "Qwitcher Grypen", cursive;
+    font-family: "Licorice", cursive;
     font-style: normal;
-
     display: inline-block;
     font-size: 2.0em;
     position: relative;
-
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: color 0.3s, border-bottom 0.3s ease-in-out;
