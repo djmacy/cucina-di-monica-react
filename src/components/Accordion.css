@@ -3,11 +3,13 @@
     width: 100%;
     margin: auto;
     margin-top: 150px;
+    color: black;
 }
 
 .accordion-container h2 {
     text-align: center;
     color: black;
+    font-family: "Caveat", cursive;
 }
 
 .wrapper {
@@ -22,12 +24,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: "Times New Roman", Serif;
+    font-family: "Caveat", cursive;
     font-weight: 500;
     font-size: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
+    color: black;
 }
 
 .question-container.active {
@@ -45,7 +48,7 @@
 }
 
 .wrapper .answer-content {
-    font-family: "Times New Roman", Serif;
+    font-family: "Caveat", cursive;
     padding: 1rem 0;
     font-size: 20px;
     font-style: italic;

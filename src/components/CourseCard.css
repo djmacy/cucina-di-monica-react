@@ -40,7 +40,8 @@
 .course-card-title {
     padding: 10px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: "Caveat", cursive;
 
    /* align-items: center; /* Vertically center the text */
    /* justify-content: center; /* Horizontally center the text */
@@ -54,13 +55,15 @@
     .course-card h3  {
         margin: 0;
         padding: 1px;
-       align-items: center;
+        align-items: center;
         justify-content: center;
+        font-family: "Caveat", cursive;
     }
 
     .course-card-title {
         height: 50px;
         display: flex;
+        font-size: 16px;
         flex-direction: column;
         justify-content: center;
     }

@@ -25,6 +25,7 @@
     font-size: 4em; /* Adjust the font size as needed */
     /*margin-bottom: 20px;*/
 }
+
 @keyframes fadeIn {
    from {
        opacity: 0;
