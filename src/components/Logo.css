@@ -22,7 +22,7 @@
     font-weight: 800;
     font-style: normal;
     font-size: 60px;
-    margin: -75px;
+    margin-top: -75px;
     text-align: center;
 }
 
@@ -74,7 +74,7 @@
         font-weight: 800;
         font-style: normal;
         font-size: 40px;
-        margin: -75px;
+        margin-top: -75px;
         text-align: center;
     }
 
@@ -163,7 +163,7 @@
         font-weight: 800;
         font-style: normal;
         font-size: 35px;
-        margin: -60px;
+        margin-top: -60px;
         text-align: center;
     }
 

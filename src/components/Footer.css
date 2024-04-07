@@ -13,6 +13,7 @@
 
 p {
     margin: 5px 0;
+    font-family: "Caveat", cursive;
 }
 
 .social-media-icons {
@@ -29,4 +30,10 @@ p {
 .social-media-icons img {
     width: 25px; /* Adjust the width of the social media icons as needed */
     height: auto;
+}
+
+@media only screen and (max-width: 360px) {
+    p {
+        font-size: 16px;
+    }
 }

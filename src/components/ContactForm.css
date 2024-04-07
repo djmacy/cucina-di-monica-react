@@ -43,7 +43,7 @@
     font-weight: 500;
     color: black;
     border-radius: 5px;
-    font-family: "Times New Roman", serif;
+    font-family: "Caveat", cursive;
     font-size: 18px;
 }
 
@@ -60,7 +60,7 @@
     width: 100%;
     /*max-width: 415px;*/
     height: 100%;
-
+    font-family: "Caveat", cursive;
     max-height: 500px;
     border: #666666;
     outline: #666666;
@@ -88,7 +88,7 @@
 
 .contact-inputs::placeholder {
     color: #808080;
-    font-family: "Times New Roman";
+    font-family: "Caveat", cursive;
     font-size: 16px;
    /* padding-left: 10px;*/
 }
@@ -96,13 +96,15 @@
 .contact-left button {
     display: flex;
     alight-items: center;
-    padding: 15px 30px;
-    font-size: 16px;
+    padding: 11px 22px;
     color: #fff;
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(270deg, #534d3e, #fdecbe);
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    font-weight: 750;
+    background: linear-gradient(280deg, #534d3e, #fdecbe);
     cursor: pointer;
 }
 

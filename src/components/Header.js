@@ -6,10 +6,12 @@ const Header = ({ title, backgroundImage }) => {
     const headerStyle = {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
+        opacity: '90%',
         backgroundPosition: 'center',
         width: 'auto',
         height: '300px', // You can customize this
         textAlign: 'center',
+        textShadow: '800',
         padding: '50px' // Adjust the padding as needed
     };
 
