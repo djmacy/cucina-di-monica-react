@@ -10,7 +10,7 @@ const templateId = process.env.REACT_APP_TEMPLATE_ID;
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
 const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
-const seoRegex = /SEO/i;
+const seoRegex = /\bSEO\b/i;
 const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 const ContactForm = () => {
     const form = useRef();
@@ -128,12 +128,12 @@ const ContactForm = () => {
 
         if (formData.message && urlRegex.test(formData.message)) {
             // Display an alert or handle the case where a URL is found in the message
-            clearForm('Not interested... Sell that elsewhere.');
+            clearForm('Please refrain from inputting url links.');
             return; // exit the function
         }
         if (formData.message && seoRegex.test(formData.message)) {
             // Display an alert or handle the case where "SEO" is found in the message
-            clearForm('Nice try. My Validation is superior to your bot :)');
+            clearForm('Please refrain from using the words SEO.');
             return; // exit the function
         }
 
