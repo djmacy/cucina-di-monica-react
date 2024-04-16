@@ -3,12 +3,13 @@ import VideoHeader from '../VideoHeader';
 import HomeCookingClasses from "../HomeCookingClasses";
 import HomeAbout from "../HomeAbout";
 import backgroundVideo from '../../videos/videoHeader.mp4';
-import logo from "../../images/remodeledForkSpoon.png"
 
 const Home = () => {
     return (
+        //I don't actually this logo does anything
         <div>
-            <VideoHeader videoSource={backgroundVideo} endingImage={logo}/>
+
+            <VideoHeader videoSource={backgroundVideo}/>
             <HomeCookingClasses/>
             <HomeAbout/>
         </div>

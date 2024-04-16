@@ -12,7 +12,8 @@ const Header = ({ title, backgroundImage }) => {
         height: '300px', // You can customize this
         textAlign: 'center',
         textShadow: '800',
-        padding: '50px' // Adjust the padding as needed
+        padding: '50px', // Adjust the padding as needed
+        marginBottom: '30px'
     };
 
     return (
