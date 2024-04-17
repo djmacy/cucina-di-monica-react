@@ -3,7 +3,6 @@ import "./ContactForm.css"
 import emailjs from '@emailjs/browser';
 import Select from 'react-select';
 import logo from '../images/Tiramisu.jpeg'
-import Logo from '../components/Logo';
 
 const serviceId = process.env.REACT_APP_SERVICE_ID;
 const templateId = process.env.REACT_APP_TEMPLATE_ID;
@@ -12,6 +11,8 @@ const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const urlRegex = /(?:https?|ftp):\/\/[^\s/$.?#].\s*/gi;
 const seoRegex = /\bSEO\b/i;
 const phoneRegex = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+const travelCost = 30;
+let priceCalc = 0;
 const ContactForm = () => {
     const form = useRef();
     const [formData, setFormData] = useState({
@@ -21,7 +22,8 @@ const ContactForm = () => {
         message: '',
         time: '',
         day: '',
-        course: ''
+        course: '',
+        people: '',
     });
 
     const cookingClasses = [
@@ -52,6 +54,22 @@ const ContactForm = () => {
         {label: "Evening", value: "Evening"}
     ]
 
+    const people = [
+        {label: "Two", value: "2"},
+        {label: "Three", value: "3"},
+        {label: "Four", value: "4"},
+        {label: "Five", value: "5"},
+        {label: "Six", value: "6"}
+    ]
+
+    const priceChart = {
+        "2" : 200 + travelCost,
+        "3" : 240 + travelCost,
+        "4" : 300 + travelCost,
+        "5" : 350 + travelCost,
+        "6" : 360 + travelCost
+    }
+
     const coursesChange = (selectedOptions) => {
         const selectedValues = selectedOptions ? selectedOptions.map(option => option.value) : [];
 
@@ -71,7 +89,6 @@ const ContactForm = () => {
 
         setFormData((prevData) => ({
             ...prevData,
-
             day: selectedValues.join(', '),
             // time: selectedValues.join(', ')
         }));
@@ -88,6 +105,28 @@ const ContactForm = () => {
        // console.log(formData.time);
     };
 
+    const peopleChange = (selectedOption) => {
+        if (!selectedOption) {
+            priceCalc = '0';
+            // Handle the case when selectedOption is null
+            setFormData((prevData) => ({
+                ...prevData,
+                people: '',
+            }));
+            return;
+        }
+
+        const { value } = selectedOption;
+        priceCalc = priceChart[value];
+        setFormData((prevData) => ({
+            ...prevData,
+            people: value,
+        }));
+
+        //console.log(priceCalc);
+        // console.log(formData.time);
+    };
+
     function clearForm(message) {
         alert(message);
         form.current.reset();
@@ -98,8 +137,11 @@ const ContactForm = () => {
             message: '',
             time: '',
             day: '',
-            course: ''
+            course: '',
+            people: '',
+            estimatedPrice: ''
         });
+        priceCalc = '0';
     }
 
     const handleChange = (e) => {
@@ -124,7 +166,7 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(formData.phone + " success");
+       // console.log(formData.phone + " success");
 
         if (formData.message && urlRegex.test(formData.message)) {
             // Display an alert or handle the case where a URL is found in the message
@@ -137,7 +179,9 @@ const ContactForm = () => {
             return; // exit the function
         }
 
-        emailjs
+
+
+       emailjs
             .sendForm(serviceId, templateId, form.current, {
                 publicKey: publicKey,
             })
@@ -149,7 +193,6 @@ const ContactForm = () => {
                     clearForm('FAILED...', error.text);
                 },
             );
-
         console.log('Form data submitted:', formData);
 
     };
@@ -196,17 +239,32 @@ const ContactForm = () => {
                     value={cookingClasses.filter(option => formData.course.includes(option.value))}
                     onChange={coursesChange}
                 />
+                <Select
+                    name="people"
+                    isClearable={true}
+                    placeholder="Select Number of People"
+                    options={people}
+                    className="contact-select"
+                    classNamePrefix="select"
+                    value={people.filter(option => formData.people.includes(option.value))}
+                    onChange={peopleChange}
+                />
 
                 <textarea name="message" placeholder="Your Message" className="contact-inputs" value={formData.message} onChange={handleChange} required />
+                <p>Estimated Price: ${priceCalc}</p>
                 <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
             </form>
             <div className="contact-right">
                 {/* <Logo below={true}/>*/}
-                <img src={logo} alt="logo" />
+                {/*<img src={logo} alt="logo" />*/}
+                <p>2 People: $230</p>
+                <p>3 People: $270</p>
+                <p>4 People: $330</p>
+                <p>5 People: $380</p>
+                <p>6 People: $390</p>
             </div>
         </div>
     );
-
 };
 
 export default ContactForm;

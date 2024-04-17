@@ -116,6 +116,11 @@
     width: 500px;
 }
 
+
+.contact-right p {
+    font-size: 50px;
+    font-weight: 600;
+}
 @media only screen and (max-width: 1100px) {
     .contact-right {
         display: none;
