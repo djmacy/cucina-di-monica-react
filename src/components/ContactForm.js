@@ -63,11 +63,11 @@ const ContactForm = () => {
     ]
 
     const priceChart = {
-        "2" : 200 + travelCost,
-        "3" : 240 + travelCost,
-        "4" : 300 + travelCost,
-        "5" : 350 + travelCost,
-        "6" : 360 + travelCost
+        "2" : 200,
+        "3" : 240,
+        "4" : 300,
+        "5" : 350,
+        "6" : 360
     }
 
     const coursesChange = (selectedOptions) => {
@@ -251,17 +251,20 @@ const ContactForm = () => {
                 />
 
                 <textarea name="message" placeholder="Your Message" className="contact-inputs" value={formData.message} onChange={handleChange} required />
-                <p>Estimated Price: ${priceCalc}</p>
-                <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
+                <p>
+                    {priceCalc != 0 ? `Estimated Price: $${priceCalc} + $${travelCost} travel cost` : null}
+                </p>                <button type="submit">Submit {/*<img src="" alt="" />*/}</button>
             </form>
             <div className="contact-right">
                 {/* <Logo below={true}/>*/}
                 {/*<img src={logo} alt="logo" />*/}
-                <p>2 People: $230</p>
-                <p>3 People: $270</p>
-                <p>4 People: $330</p>
-                <p>5 People: $380</p>
-                <p>6 People: $390</p>
+                <p>2 People: $200 ($100/person)</p>
+                <p>3 People: $240 ($80/person)</p>
+                <p>4 People: $300 ($75/person)</p>
+                <p>5 People: $350 ($70/person)</p>
+                <p>6 People: $360 ($60/person)</p>
+                <p className="travel">*$30 additional charge for travel costs*</p>
+
             </div>
         </div>
     );
