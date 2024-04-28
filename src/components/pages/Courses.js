@@ -199,7 +199,7 @@ const Courses = () => {
                         imageArray={vegetarianMenuImages}
                         duration={"2 Hours"}
                         appetizer="Pasta Alla Norma"
-                        firstCourse="Spaghetti Alla Chittara"
+                        firstCourse="Spaghetti Alla Chitarra"
                         dessert="Pistacchio Tiramisù"
                     />
                     <CourseCard
