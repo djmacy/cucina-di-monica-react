@@ -31,6 +31,11 @@ import suppliAllaRomana from "../../images/RomaMenu/supplìAllaRomana.png";
 import savoryBread from "../../images/SeasonalMenu/savoryBread.png";
 import lasagnaWithBaconAndBroccoli from "../../images/SeasonalMenu/lasagnaWithBaconAndBrocolli.png";
 import zeppoleDiSanGiusseppe from "../../images/SeasonalMenu/zeppoleDiSanGiuseppe.png";
+import bruschettaAlPomodoro from "../../images/SeasonalMenu/bruschettaAlPomodoro.jpg";
+import risottoWithZucchiniAndSaffron from "../../images/SeasonalMenu/risottoAlleZucchineSaffron.jpeg";
+import lemonChicken from "../../images/SeasonalMenu/lemonChicken.jpeg";
+import lemonAndRicottaCake from "../../images/SeasonalMenu/lemonaAndRicottaCake.jpeg";
+
 //Sicilian Menu Images
 import arancini from "../../images/SicilianMenu/arancini.png";
 import busiateWithTrapanese from "../../images/SicilianMenu/busiateWithTrapanesePesto.png";
@@ -67,7 +72,7 @@ const forestMenuImages = [gulaschAndPolenta, pappardelleWithPorciniMushrooms, ap
 const gnocchiMenuImages = [gnocchettiSardiWithArugulaPesto, gnocchiWithBeefRagu, rabatonAlessandrini, pannaCottaWithBerries];
 const monicasFavoriteMenuImages = [focaccia, casunziei, crostataDiMarmellata];
 const romeMenuImages= [suppliAllaRomana, rigatoniAllAmatriciana, saltimbocca, maritozzi];
-const seasonalMenuImages = [savoryBread, lasagnaWithBaconAndBroccoli, zeppoleDiSanGiusseppe];
+const seasonalMenuImages = [bruschettaAlPomodoro, risottoWithZucchiniAndSaffron, lemonChicken, lemonAndRicottaCake];
 const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
 const springMenuImages = [savoryCroissant, crespelleWithCheeseAndSpinach, fruitAndCreamTart];
 const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
@@ -216,14 +221,15 @@ const Courses = () => {
                         dessert={"Tiramisù"}
                     />
                     <CourseCard
-                        imageUrl={zeppoleDiSanGiusseppe}
+                        imageUrl={bruschettaAlPomodoro}
                         title="Seasonal Menu"
                         id="Seasonal Menu"
                         imageArray={seasonalMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Savory Bread"}
-                        firstCourse={"Lasagna With Bacon \nand Broccoli"}
-                        dessert={"Zeppole di San Giuseppe"}
+                        duration="2 Hours"
+                        appetizer="Bruschetta al Pomodoro"
+                        firstCourse={"Risotto with Zucchini \nand Saffron"}
+                        secondCourse="Lemon Chicken"
+                        dessert="Lemon and Ricotta Cake"
                     />
                 </div>
             </div>
@@ -359,14 +365,15 @@ const Courses = () => {
                         dessert={"Tiramisù"}
                     />
                     <CourseCard
-                        imageUrl={zeppoleDiSanGiusseppe}
+                        imageUrl={bruschettaAlPomodoro}
                         title="Seasonal Menu"
                         id="Seasonal Menu"
                         imageArray={seasonalMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Savory Bread"}
-                        firstCourse={"Lasagna With Bacon \nand Broccoli"}
-                        dessert={"Zeppole di San Giuseppe"}
+                        duration="2 Hours"
+                        appetizer="Bruschetta al Pomodoro"
+                        firstCourse={"Risotto with Zucchini \nand Saffron"}
+                        secondCourse="Lemon Chicken"
+                        dessert="Lemon and Ricotta Cake"
                     />
                 </div>
             </div>
