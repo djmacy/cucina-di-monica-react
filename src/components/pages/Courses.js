@@ -52,6 +52,8 @@ import strawberryTiramisu from "../../images/ThatsAmoreMenu/strawberryTiramisù.
 import pastaAllaNorma from "../../images/VegetarianMenu/pastaAllaNorma.png";
 import pistacchioTiramisu from "../../images/VegetarianMenu/pistacchioTiramisù.png"
 import spaghettiAllaChittara from "../../images/VegetarianMenu/spaghettiAllaChittarraWithLemonSauce.png";
+import pestoBraidedBread from "../../images/VegetarianMenu/pestoBraidedBread.jpg";
+import zucchiniQuiche from "../../images/VegetarianMenu/zucchiniQuiche.jpg";
 //Veneto Menu
 import bigoliWithWhiteRagu from "../../images/VenetoMenu/bigoliWithWhiteRagùSauce.png";
 import braidedBreadWithSorpressaAndAsiage from "../../images/VenetoMenu/braidedBreadWithSopressaAndAsiagoCheese.png";
@@ -70,7 +72,7 @@ const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
 const springMenuImages = [savoryCroissant, crespelleWithCheeseAndSpinach, fruitAndCreamTart];
 const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
 const thatsAmoreMenuImages = [danubioSalato, heartShapedFilledPasta, eggplantParmigiana, strawberryTiramisu];
-const vegetarianMenuImages = [pastaAllaNorma, spaghettiAllaChittara, pistacchioTiramisu];
+const vegetarianMenuImages = [pestoBraidedBread, zucchiniQuiche, spaghettiAllaChittara, pistacchioTiramisu];
 const venetoMenuImages = [braidedBreadWithSorpressaAndAsiage, bigoliWithWhiteRagu, tiramisu];
 const Courses = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Initialize with current window width
@@ -193,13 +195,14 @@ const Courses = () => {
                         dessert={"Strawberry Tiramisù"}
                     />
                     <CourseCard
-                        imageUrl={spaghettiAllaChittara}
+                        imageUrl={pestoBraidedBread}
                         title="Vegetarian Menu"
                         id="Vegetarian Menu"
                         imageArray={vegetarianMenuImages}
                         duration={"2 Hours"}
-                        appetizer="Pasta Alla Norma"
-                        firstCourse="Spaghetti Alla Chitarra"
+                        appetizer="Pesto Braided Bread"
+                        firstCourse="Zucchini Quiche"
+                        secondCourse="Spaghetti Alla Chitarra"
                         dessert="Pistacchio Tiramisù"
                     />
                     <CourseCard
@@ -335,13 +338,14 @@ const Courses = () => {
                 <div className="course-cards-container">
 
                     <CourseCard
-                        imageUrl={spaghettiAllaChittara}
+                        imageUrl={pestoBraidedBread}
                         title="Vegetarian Menu"
                         id="Vegetarian Menu"
                         imageArray={vegetarianMenuImages}
                         duration={"2 Hours"}
-                        appetizer="Pasta Alla Norma"
-                        firstCourse="Spaghetti Alla Chitarra"
+                        appetizer="Pesto Braided Bread"
+                        firstCourse="Zucchini Quiche"
+                        secondCourse="Spaghetti Alla Chitarra"
                         dessert="Pistacchio Tiramisù"
                     />
                     <CourseCard
