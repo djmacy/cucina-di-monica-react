@@ -7,6 +7,10 @@ const data = [
         answer: 'In the comfort of your own home. I will come to you with all the supplies needed. If you have a venue for a small event please contact me.' ,
     },
     {
+        question: 'What are your prices for cooking classes?',
+        answer: '2 People: $200 ($100/person), 3 People: $240 ($80/person, 4 People: $300 ($75/person) 5 People: $350 ($70/person), 6 People: $360 ($60/person). There is a $30 additional charge for travel costs.' ,
+    },
+    {
         question: 'Do you offer small caterings?',
         answer: 'Absolutely, I do cater small events sizing from 10-20 people. Please contact me directly for more information.',
     },
