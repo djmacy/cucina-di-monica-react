@@ -8,7 +8,7 @@ const data = [
     },
     {
         question: 'What are your prices for cooking classes?',
-        answer: '2 People: $200 ($100/person), 3 People: $240 ($80/person, 4 People: $300 ($75/person) 5 People: $350 ($70/person), 6 People: $360 ($60/person). There is a $30 additional charge for travel costs. You may also choose to have cocktails included for an additional $50. Visit the courses page for more information.' ,
+        answer: '2 People: $200 ($100/person), 3 People: $240 ($80/person, 4 People: $300 ($75/person) 5 People: $350 ($70/person), 6 People: $360 ($60/person). There is a $30 additional charge for travel costs. You may also choose to have cocktails for an additional $50. Visit the <a href="https://cucinadimonica.com/courses">courses</a> page to see what drinks are offered.' ,
     },
     {
         question: 'Do you offer small caterings?',
@@ -36,14 +36,13 @@ const data = [
     }
 ];
 
-//accordion item component
+// Accordion item component
 const AccordionItem = ({ question, answer, isOpen, onClick }) => {
-    const contentHeight = useRef()
-    return(
-        <div className="wrapper" >
-            <button className={`question-container ${isOpen ? 'active' : ''}`} onClick={onClick} >
+    const contentHeight = useRef();
+    return (
+        <div className="wrapper">
+            <button className={`question-container ${isOpen ? 'active' : ''}`} onClick={onClick}>
                 <p className='question-content'>{question}</p>
-
             </button>
 
             <div ref={contentHeight} className="answer-container" style={
@@ -51,11 +50,11 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
                     ? { height: contentHeight.current.scrollHeight }
                     : { height: "0px" }
             }>
-                <p className="answer-content">{answer}</p>
+                <p className="answer-content" dangerouslySetInnerHTML={{ __html: answer }}></p>
             </div>
         </div>
     )
-}
+};
 
 const Accordion = () => {
     const [activeIndex, setActiveIndex] = useState(null);
