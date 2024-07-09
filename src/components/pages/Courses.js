@@ -79,6 +79,7 @@ import zucchiniQuiche from "../../images/VegetarianMenu/zucchiniQuiche.jpg";
 import bigoliWithWhiteRagu from "../../images/VenetoMenu/bigoliWithWhiteRagùSauce.png";
 import braidedBreadWithSorpressaAndAsiage from "../../images/VenetoMenu/braidedBreadWithSopressaAndAsiagoCheese.png";
 import tiramisu from "../../images/VenetoMenu/tiramisù.png";
+import LineText from "../LineText";
 
 //import app from "../../App";
 
@@ -120,42 +121,7 @@ const Courses = () => {
             <div>
                 <Header backgroundImage={backgroundImage} title="Courses"/>
 
-                <div className="course-cards-container">
 
-                    <CourseCard
-                        imageUrl={focacciaDiRecco}
-                        title="Ligure Menu"
-                        id="Ligure Menu"
-                        imageArray={ligureMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Focaccia di Recco"}
-                        firstCourse={"Minestrone Genovese"}
-                        secondCourse={"Filled Vegetables"}
-                        dessert={"Torta della Nonna"}
-                    />
-                    <CourseCard
-                        imageUrl={tortelliniInBroth}
-                        title="Nonno Menu"
-                        id="Nonno Menu"
-                        imageArray={nonnoMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Frico Frulano"}
-                        firstCourse={"Tortellini in Broth"}
-                        secondCourse={"Savory Crumble with \nZucchini and Speck"}
-                        dessert={"Cantucci Biscotti"}
-                    />
-                    <CourseCard
-                        imageUrl={caponata}
-                        title="Summertime Menu"
-                        id="Summertime Menu"
-                        imageArray={summertimeMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Caponata"}
-                        firstCourse={"Cavatelli with Basil Pesto"}
-                        secondCourse={"Pollo alla Romana"}
-                        dessert={"Torta Caprese"}
-                    />
-                </div>
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={pumpkinBread}
@@ -288,48 +254,55 @@ const Courses = () => {
                         dessert="Lemon and Ricotta Cake"
                     />
                 </div>
+                <LineText text="New Additions"/>
+
+                <div className="course-cards-container">
+
+                    <CourseCard
+                        imageUrl={focacciaDiRecco}
+                        title="Ligure Menu"
+                        id="Ligure Menu"
+                        imageArray={ligureMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Focaccia di Recco"}
+                        firstCourse={"Minestrone Genovese"}
+                        secondCourse={"Filled Vegetables"}
+                        dessert={"Torta della Nonna"}
+                    />
+                    <CourseCard
+                        imageUrl={tortelliniInBroth}
+                        title="Nonno Menu"
+                        id="Nonno Menu"
+                        imageArray={nonnoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Frico Frulano"}
+                        firstCourse={"Tortellini in Broth"}
+                        secondCourse={"Savory Crumble with \nZucchini and Speck"}
+                        dessert={"Cantucci Biscotti"}
+                    />
+                    <CourseCard
+                        imageUrl={caponata}
+                        title="Summertime Menu"
+                        id="Summertime Menu"
+                        imageArray={summertimeMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Caponata"}
+                        firstCourse={"Cavatelli with Basil Pesto"}
+                        secondCourse={"Pollo alla Romana"}
+                        dessert={"Torta Caprese"}
+                    />
+                </div>
+                <LineText text="Cocktails"/>
+
 
             </div>
+
         );
     } else {
         return (
             <div>
                 <Header backgroundImage={backgroundImage} title="Courses"/>
-                <div className="course-cards-container">
-                    <CourseCard
-                        imageUrl={focacciaDiRecco}
-                        title="Ligure Menu"
-                        id="Ligure Menu"
-                        imageArray={ligureMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Focaccia di Recco"}
-                        firstCourse={"Minestrone Genovese"}
-                        secondCourse={"Filled Vegetables"}
-                        dessert={"Torta della Nonna"}
-                    />
-                    <CourseCard
-                        imageUrl={tortelliniInBroth}
-                        title="Nonno Menu"
-                        id="Nonno Menu"
-                        imageArray={nonnoMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Frico Frulano"}
-                        firstCourse={"Tortellini in Broth"}
-                        secondCourse={"Savory Crumble with \nZucchini and Speck"}
-                        dessert={"Cantucci Biscotti"}
-                    />
-                    <CourseCard
-                        imageUrl={caponata}
-                        title="Summertime Menu"
-                        id="Summertime Menu"
-                        imageArray={summertimeMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Caponata"}
-                        firstCourse={"Cavatelli with Basil Pesto"}
-                        secondCourse={"Pollo alla Romana"}
-                        dessert={"Torta Caprese"}
-                    />
-                </div>
+
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={pumpkinBread}
@@ -466,6 +439,79 @@ const Courses = () => {
                         firstCourse={"Risotto with Zucchini \nand Saffron"}
                         secondCourse="Lemon Chicken"
                         dessert="Lemon and Ricotta Cake"
+                    />
+                </div>
+                <LineText text="New Additions"/>
+
+                <div className="course-cards-container">
+                    <CourseCard
+                        imageUrl={focacciaDiRecco}
+                        title="Ligure Menu"
+                        id="Ligure Menu"
+                        imageArray={ligureMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Focaccia di Recco"}
+                        firstCourse={"Minestrone Genovese"}
+                        secondCourse={"Filled Vegetables"}
+                        dessert={"Torta della Nonna"}
+                    />
+                    <CourseCard
+                        imageUrl={tortelliniInBroth}
+                        title="Nonno Menu"
+                        id="Nonno Menu"
+                        imageArray={nonnoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Frico Frulano"}
+                        firstCourse={"Tortellini in Broth"}
+                        secondCourse={"Savory Crumble with \nZucchini and Speck"}
+                        dessert={"Cantucci Biscotti"}
+                    />
+                    <CourseCard
+                        imageUrl={caponata}
+                        title="Summertime Menu"
+                        id="Summertime Menu"
+                        imageArray={summertimeMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Caponata"}
+                        firstCourse={"Cavatelli with Basil Pesto"}
+                        secondCourse={"Pollo alla Romana"}
+                        dessert={"Torta Caprese"}
+                    />
+                </div>
+                <LineText text="Cocktails"/>
+                <div className="course-cards-container">
+                    <CourseCard
+                        imageUrl={focacciaDiRecco}
+                        title="Ligure Menu"
+                        id="Ligure Menu"
+                        imageArray={ligureMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Focaccia di Recco"}
+                        firstCourse={"Minestrone Genovese"}
+                        secondCourse={"Filled Vegetables"}
+                        dessert={"Torta della Nonna"}
+                    />
+                    <CourseCard
+                        imageUrl={tortelliniInBroth}
+                        title="Nonno Menu"
+                        id="Nonno Menu"
+                        imageArray={nonnoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Frico Frulano"}
+                        firstCourse={"Tortellini in Broth"}
+                        secondCourse={"Savory Crumble with \nZucchini and Speck"}
+                        dessert={"Cantucci Biscotti"}
+                    />
+                    <CourseCard
+                        imageUrl={caponata}
+                        title="Summertime Menu"
+                        id="Summertime Menu"
+                        imageArray={summertimeMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Caponata"}
+                        firstCourse={"Cavatelli with Basil Pesto"}
+                        secondCourse={"Pollo alla Romana"}
+                        dessert={"Torta Caprese"}
                     />
                 </div>
             </div>
