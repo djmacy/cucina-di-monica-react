@@ -4,6 +4,10 @@ import Header from "../Header";
 import CourseCard from "../CourseCard";
 import './Courses.css';
 
+//cocktails
+import hugo from "../../images/Cocktails/hugo.jpg";
+import aperolSpritz from "../../images/Cocktails/aperolSpritz.jpg"
+import campariSpritz from "../../images/Cocktails/campariSpritz.jpg"
 //Fall Menu Images
 import butternutSquashRavioli from "../../images/FallMenu/butternutSquashRavioli.png";
 import pumpkinAndCinnamonCake from "../../images/FallMenu/pumpkinAndCinnamonCake.png";
@@ -125,8 +129,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={pumpkinBread}
-                        title="Fall Menu"
-                        id="Fall Card"
+                        title="Fall"
+                        id="Fall"
                         imageArray={fallMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Pumpkin Bread"}
@@ -136,8 +140,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={appleStrudel}
-                        title="Forest Menu"
-                        id="Forest Menu"
+                        title="Forest"
+                        id="Forest"
                         imageArray={forestMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Gulasch And Polenta"}
@@ -146,8 +150,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={gnocchiWithBeefRagu}
-                        title="Gnocchi Menu"
-                        id="Gnocchi Menu"
+                        title="Gnocchi"
+                        id="Gnocchi"
                         imageArray={gnocchiMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Gnocchetti Sardi \nWith Arugula Pesto"}
@@ -157,8 +161,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={focaccia}
-                        title="Monicas Favorite Menu"
-                        id="Monicas Favorite Menu"
+                        title="Monica's Favorite"
+                        id="Monicas Favorite"
                         imageArray={monicasFavoriteMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Focaccia"}
@@ -169,8 +173,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={maritozzi}
-                        title="Roma Menu"
-                        id="Roma Menu"
+                        title="Roma"
+                        id="Roma"
                         imageArray={romeMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Supplì Alla Romana"}
@@ -180,8 +184,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={cannoli}
-                        title="Sicilian Menu"
-                        id="Sicilian Menu"
+                        title="Sicilian"
+                        id="Sicilian"
                         imageArray={sicilianMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Arancini"}
@@ -190,8 +194,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={fruitAndCreamTart}
-                        title="Spring Menu"
-                        id="Spring Menu"
+                        title="Spring"
+                        id="Spring"
                         imageArray={springMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Savory Croissant"}
@@ -200,8 +204,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={lasagneAllaBolognese}
-                        title="Taste of Italy Menu"
-                        id="Taste of Italy Menu"
+                        title="Taste of Italy"
+                        id="Taste of Italy"
                         imageArray={tasteOfItalyMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Risotto Alla Milanese"}
@@ -212,8 +216,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={heartShapedFilledPasta}
-                        title="Thats Amore Menu"
-                        id="Thats Amore Menu"
+                        title="That's Amore"
+                        id="Thats Amore"
                         imageArray={thatsAmoreMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Danubio Salato"}
@@ -223,8 +227,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={pestoBraidedBread}
-                        title="Vegetarian Menu"
-                        id="Vegetarian Menu"
+                        title="Vegetarian"
+                        id="Vegetarian"
                         imageArray={vegetarianMenuImages}
                         duration={"2 Hours"}
                         appetizer="Pesto Braided Bread"
@@ -234,8 +238,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={tiramisu}
-                        title="Veneto Menu"
-                        id="Veneto Menu"
+                        title="Veneto"
+                        id="Veneto"
                         imageArray={venetoMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Braided Bread With \nSorpressa and Asiago"}
@@ -244,8 +248,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={bruschettaAlPomodoro}
-                        title="Seasonal Menu"
-                        id="Seasonal Menu"
+                        title="Seasonal"
+                        id="Seasonal"
                         imageArray={seasonalMenuImages}
                         duration="2 Hours"
                         appetizer="Bruschetta al Pomodoro"
@@ -260,8 +264,8 @@ const Courses = () => {
 
                     <CourseCard
                         imageUrl={focacciaDiRecco}
-                        title="Ligure Menu"
-                        id="Ligure Menu"
+                        title="Ligure"
+                        id="Ligure"
                         imageArray={ligureMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Focaccia di Recco"}
@@ -271,8 +275,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={tortelliniInBroth}
-                        title="Nonno Menu"
-                        id="Nonno Menu"
+                        title="Nonno"
+                        id="Nonno"
                         imageArray={nonnoMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Frico Frulano"}
@@ -282,8 +286,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={caponata}
-                        title="Summertime Menu"
-                        id="Summertime Menu"
+                        title="Summertime"
+                        id="Summertime"
                         imageArray={summertimeMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Caponata"}
@@ -293,7 +297,24 @@ const Courses = () => {
                     />
                 </div>
                 <LineText text="Cocktails"/>
+                <div className="course-cards-container">
+                    <CourseCard
+                        imageUrl={aperolSpritz}
+                        title="Aperol Spritz"
+                        id="Aperol Spritz"
+                    />
+                    <CourseCard
+                        imageUrl={hugo}
+                        title="Hugo"
+                        id="Hugo"
 
+                    />
+                    <CourseCard
+                        imageUrl={campariSpritz}
+                        title="Campari Spritz"
+                        id="Campari Spritz"
+                    />
+                </div>
 
             </div>
 
@@ -306,8 +327,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={pumpkinBread}
-                        title="Fall Menu"
-                        id="Fall Card"
+                        title="Fall"
+                        id="Fall"
                         imageArray={fallMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Pumpkin Bread"}
@@ -317,8 +338,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={appleStrudel}
-                        title="Forest Menu"
-                        id="Forest Menu"
+                        title="Forest"
+                        id="Forest"
                         imageArray={forestMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Gulasch And Polenta"}
@@ -327,8 +348,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={gnocchiWithBeefRagu}
-                        title="Gnocchi Menu"
-                        id="Gnocchi Menu"
+                        title="Gnocchi"
+                        id="Gnocchi"
                         imageArray={gnocchiMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Gnocchetti Sardi \nWith Arugula Pesto"}
@@ -341,8 +362,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={focaccia}
-                        title="Monicas Favorite Menu"
-                        id="Monicas Favorite Menu"
+                        title="Monica's Favorite"
+                        id="Monicas Favorite"
                         imageArray={monicasFavoriteMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Focaccia"}
@@ -351,8 +372,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={maritozzi}
-                        title="Roma Menu"
-                        id="Roma Menu"
+                        title="Roma"
+                        id="Roma"
                         imageArray={romeMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Supplì Alla Romana"}
@@ -362,8 +383,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={cannoli}
-                        title="Sicilian Menu"
-                        id="Sicilian Menu"
+                        title="Sicilian"
+                        id="Sicilian"
                         imageArray={sicilianMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Arancini"}
@@ -376,8 +397,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={fruitAndCreamTart}
-                        title="Spring Menu"
-                        id="Spring Menu"
+                        title="Spring"
+                        id="Spring"
                         imageArray={springMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Savory Croissant"}
@@ -386,8 +407,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={lasagneAllaBolognese}
-                        title="Taste of Italy Menu"
-                        id="Taste of Italy Menu"
+                        title="Taste of Italy"
+                        id="Taste of Italy"
                         imageArray={tasteOfItalyMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Risotto Alla Milanese"}
@@ -396,8 +417,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={heartShapedFilledPasta}
-                        title="Thats Amore Menu"
-                        id="Thats Amore Menu"
+                        title="That's Amore"
+                        id="Thats Amore"
                         imageArray={thatsAmoreMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Danubio Salato"}
@@ -410,8 +431,8 @@ const Courses = () => {
 
                     <CourseCard
                         imageUrl={pestoBraidedBread}
-                        title="Vegetarian Menu"
-                        id="Vegetarian Menu"
+                        title="Vegetarian"
+                        id="Vegetarian"
                         imageArray={vegetarianMenuImages}
                         duration={"2 Hours"}
                         appetizer="Pesto Braided Bread"
@@ -421,8 +442,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={tiramisu}
-                        title="Veneto Menu"
-                        id="Veneto Menu"
+                        title="Veneto"
+                        id="Veneto"
                         imageArray={venetoMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Braided Bread With \nSorpressa and Asiago"}
@@ -431,8 +452,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={bruschettaAlPomodoro}
-                        title="Seasonal Menu"
-                        id="Seasonal Menu"
+                        title="Seasonal"
+                        id="Seasonal"
                         imageArray={seasonalMenuImages}
                         duration="2 Hours"
                         appetizer="Bruschetta al Pomodoro"
@@ -446,8 +467,8 @@ const Courses = () => {
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={focacciaDiRecco}
-                        title="Ligure Menu"
-                        id="Ligure Menu"
+                        title="Ligure"
+                        id="Ligure"
                         imageArray={ligureMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Focaccia di Recco"}
@@ -457,8 +478,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={tortelliniInBroth}
-                        title="Nonno Menu"
-                        id="Nonno Menu"
+                        title="Nonno"
+                        id="Nonno"
                         imageArray={nonnoMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Frico Frulano"}
@@ -468,8 +489,8 @@ const Courses = () => {
                     />
                     <CourseCard
                         imageUrl={caponata}
-                        title="Summertime Menu"
-                        id="Summertime Menu"
+                        title="Summertime"
+                        id="Summertime"
                         imageArray={summertimeMenuImages}
                         duration={"2 Hours"}
                         appetizer={"Caponata"}
@@ -481,37 +502,20 @@ const Courses = () => {
                 <LineText text="Cocktails"/>
                 <div className="course-cards-container">
                     <CourseCard
-                        imageUrl={focacciaDiRecco}
-                        title="Ligure Menu"
-                        id="Ligure Menu"
-                        imageArray={ligureMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Focaccia di Recco"}
-                        firstCourse={"Minestrone Genovese"}
-                        secondCourse={"Filled Vegetables"}
-                        dessert={"Torta della Nonna"}
+                        imageUrl={aperolSpritz}
+                        title="Aperol Spritz"
+                        id="Aperol Spritz"
                     />
                     <CourseCard
-                        imageUrl={tortelliniInBroth}
-                        title="Nonno Menu"
-                        id="Nonno Menu"
-                        imageArray={nonnoMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Frico Frulano"}
-                        firstCourse={"Tortellini in Broth"}
-                        secondCourse={"Savory Crumble with \nZucchini and Speck"}
-                        dessert={"Cantucci Biscotti"}
+                        imageUrl={hugo}
+                        title="Hugo"
+                        id="Hugo"
+
                     />
                     <CourseCard
-                        imageUrl={caponata}
-                        title="Summertime Menu"
-                        id="Summertime Menu"
-                        imageArray={summertimeMenuImages}
-                        duration={"2 Hours"}
-                        appetizer={"Caponata"}
-                        firstCourse={"Cavatelli with Basil Pesto"}
-                        secondCourse={"Pollo alla Romana"}
-                        dessert={"Torta Caprese"}
+                        imageUrl={campariSpritz}
+                        title="Campari Spritz"
+                        id="Campari Spritz"
                     />
                 </div>
             </div>

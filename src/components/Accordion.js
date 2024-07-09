@@ -8,7 +8,7 @@ const data = [
     },
     {
         question: 'What are your prices for cooking classes?',
-        answer: '2 People: $200 ($100/person), 3 People: $240 ($80/person, 4 People: $300 ($75/person) 5 People: $350 ($70/person), 6 People: $360 ($60/person). There is a $30 additional charge for travel costs.' ,
+        answer: '2 People: $200 ($100/person), 3 People: $240 ($80/person, 4 People: $300 ($75/person) 5 People: $350 ($70/person), 6 People: $360 ($60/person). There is a $30 additional charge for travel costs. You may also choose to have cocktails included for an additional $50. Visit the courses page for more information.' ,
     },
     {
         question: 'Do you offer small caterings?',
