@@ -34,7 +34,7 @@ const HomeCookingClasses = () => {
             <div className='course-cards-container'>
                 <CourseCard
                     imageUrl={focaccia}
-                    title="Monica's Favorite Menu"
+                    title="Monica's Favorite"
                     id="Monicas Favorite Menu"
                     imageArray={monicasFavoriteMenuImages}
                     duration={"2 Hours"}
@@ -44,7 +44,7 @@ const HomeCookingClasses = () => {
                 />
                 <CourseCard
                     imageUrl={lasagneAllaBolognese}
-                    title="Taste of Italy Menu"
+                    title="Taste of Italy"
                     id="Taste of Italy Menu"
                     imageArray={tasteOfItalyMenuImages}
                     duration={"2 Hours"}
@@ -54,7 +54,7 @@ const HomeCookingClasses = () => {
                 />
                 <CourseCard
                     imageUrl={cannoli}
-                    title="Sicilian Menu"
+                    title="Sicilian"
                     id="Sicilian Menu"
                     imageArray={sicilianMenuImages}
                     duration={"2 Hours"}

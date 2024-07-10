@@ -123,9 +123,8 @@ const Courses = () => {
     if (window.innerWidth > 850) {
         return (
             <div>
-                <Header backgroundImage={backgroundImage} title="Courses"/>
-
-
+                <Header backgroundImage={backgroundImage} title=""/>
+                <LineText text="Courses"/>
                 <div className="course-cards-container">
                     <CourseCard
                         imageUrl={pumpkinBread}
@@ -322,7 +321,8 @@ const Courses = () => {
     } else {
         return (
             <div>
-                <Header backgroundImage={backgroundImage} title="Courses"/>
+                <Header backgroundImage={backgroundImage} title=""/>
+                <LineText text="Courses"/>
 
                 <div className="course-cards-container">
                     <CourseCard
