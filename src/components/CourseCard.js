@@ -3,7 +3,7 @@ import ThreeCourse from './ThreeCourse';
 import Modal from './Modal';
 import './CourseCard.css';
 
-const CourseCard = ({ title, imageUrl, id, imageArray, duration, appetizer, firstCourse, secondCourse, dessert}) => {
+const CourseCard = ({ title, imageUrl, id, imageArray, duration, appetizer, firstCourse, secondCourse, dessert, description}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [shouldGrow, setShouldGrow] = useState(true);
     const [isClicked, setIsClicked] = useState(false);
@@ -61,6 +61,7 @@ const CourseCard = ({ title, imageUrl, id, imageArray, duration, appetizer, firs
                         firstCourse={firstCourse}
                         secondCourse={secondCourse}
                         dessert={dessert}
+                        description={description}
                     />
                 </Modal>
             </div>

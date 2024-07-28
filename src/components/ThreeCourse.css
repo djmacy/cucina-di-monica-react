@@ -11,7 +11,7 @@
 .three-course-content {
     white-space: pre-line;
     font-size: 15px; /* Adjust the font size as needed */
-    /*margin-top: 5px; /* Add margin for spacing */
+    margin-top: 10px; /* Add margin for spacing */
     /*justify-content: left;*/
     font-family: "Caveat", cursive;
 }
@@ -20,6 +20,7 @@
     margin-top: 75px;
     display: flex;
     justify-content: space-around;
+
 }
 
 .content-item {
@@ -32,6 +33,10 @@
     height: 75px;
     object-fit: cover;
     border-radius: 10%;
+}
+
+.content-image:hover {
+    cursor: pointer;
 }
 
 .four-course-content-container {
@@ -75,3 +80,4 @@
         height: 60px;
     }
 }
+

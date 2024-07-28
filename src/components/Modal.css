@@ -35,6 +35,9 @@
 
 .modal.open {
     display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .modal-overlay {
@@ -46,6 +49,7 @@
 }
 
 .modal-content {
+
     width: 90%;
     height: 90vh;
     background-color: #fdecbe;
