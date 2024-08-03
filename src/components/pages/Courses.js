@@ -23,10 +23,11 @@ import gnocchiWithBeefRagu from "../../images/GnocchiMenu/gnocchiWithBeefRagù.p
 import pannaCottaWithBerries from "../../images/GnocchiMenu/pannaCottaWithBerries.png";
 import rabatonAlessandrini from "../../images/GnocchiMenu/rabatonAlessandrini(RicottaAndSpinachGnocchi).png";
 //Ligure Menu
-import focacciaDiRecco from "../../images/LigureMenu/focacciaDiRecco.jpeg";
+//import focacciaDiRecco from "../../images/LigureMenu/focacciaDiRecco.jpeg";
+import focaccia from "../../images/MonicasFavoriteMenu/focaccia.png";
 import minestroneGenovese from "../../images/LigureMenu/minestroneGenoveseWithBasilPesto.jpeg";
 import filledVegetables from "../../images/LigureMenu/filledVegetables.jpeg";
-import ravioliAllaBoragine from "../../images/LigureMenu/ravioliAllaBoragine.jpeg";
+//import ravioliAllaBoragine from "../../images/LigureMenu/ravioliAllaBoragine.jpeg";
 import tortaDellaNonna from "../../images/LigureMenu/Torta della nonna.jpeg";
 //Nonno Menu
 import fricoFriulano from "../../images/NonnoMenu/fricoFriulano.jpeg";
@@ -39,13 +40,15 @@ import cavatelliWithBasilPesto from "../../images/SummertimeMenu/cavatelliWithBa
 import polloAllaRomana from "../../images/SummertimeMenu/polloAllaRomana.jpeg";
 import tortaCaprese from "../../images/SummertimeMenu/tortaCaprese.jpg";
 //Monicas Favorite Menu Images
+import piadinaRomagnola from "../../images/MonicasFavoriteMenu/piadinaRomagnola.jpg"
+import cannelloni from "../../images/MonicasFavoriteMenu/cannelloniRicottaSpinach.jpg"
 import casunziei from "../../images/MonicasFavoriteMenu/casunziei.png";
 import crostataDiMarmellata from "../../images/MonicasFavoriteMenu/crostataDiMarmellata.png";
-import focaccia from "../../images/MonicasFavoriteMenu/focaccia.png";
+
 //Roma Menu Images
 import maritozzi from "../../images/RomaMenu/maritozzi.png";
 import spaghettiAlAmatriciana from "../../images/RomaMenu/spaghettiAlAmatriciana.jpg";
-import rigatoniAllAmatriciana from "../../images/RomaMenu/rigatoniAllAmatriciana.png";
+//import rigatoniAllAmatriciana from "../../images/RomaMenu/rigatoniAllAmatriciana.png";
 import saltimbocca from "../../images/RomaMenu/saltimbocca.png";
 import suppliAllaRomana from "../../images/RomaMenu/supplìAllaRomana.png";
 //SeasonalMenu Images
@@ -112,7 +115,7 @@ const gnocchiMenuDescriptions = {
 
 //Ligure Description
 const ligureMenuDescriptions = {
-    appetizer : "A specialty from Recco, this focaccia is renowned for its thin, crispy crust and rich, creamy filling of stracchino cheese. It’s baked to a golden perfection, offering a delightful contrast between the crisp exterior and the melting cheese inside.",
+    appetizer : "A classic Italian flatbread, airy and soft on the inside with a golden, crisp crust, generously drizzled with extra virgin olive oil and sprinkled with sea salt and fresh rosemary, perfect as an appetizer or a side dish.",
     firstCourse : "A hearty vegetable soup from Genoa, packed with a variety of seasonal vegetables like carrots, potatoes, beans, and cabbage, simmered in a flavorful broth and often enriched with pesto for a vibrant, herbal finish.",
     secondCourse : "A traditional Ligurian dish featuring a selection of vegetables such as zucchini, peppers, and eggplant, stuffed with a savory mixture of breadcrumbs, herbs, and cheese, then baked until tender and flavorful.",
     dessert : "A classic Italian dessert from Liguria, this \"Grandmother's Cake\" is a creamy custard tart with a buttery, crisp pastry crust, often garnished with pine nuts and powdered sugar, offering a comforting and indulgent treat."
@@ -133,9 +136,9 @@ const summertimeMenuDescriptions = {
 }
 //Monicas Favorite Description
 const monicasFavoriteMenuDescriptions = {
-    appetizer : "A classic Italian flatbread, airy and soft on the inside with a golden, crisp crust, generously drizzled with extra virgin olive oil and sprinkled with sea salt and fresh rosemary, perfect as an appetizer or a side dish.",
+    appetizer : "A traditional flatbread from the Emilia-Romagna region, piadina is made with simple ingredients like flour, lard, and water, then cooked on a griddle. It’s typically served warm and folded around a variety of fillings, such as cured meats, cheeses, and fresh vegetables, offering a delicious and versatile meal or snack.",
     firstCourse : "Traditional stuffed pasta from the Dolomites, these half-moon-shaped ravioli are filled with a sweet-savory mixture of roasted red beets, potatoes, and ricotta, served with a sage butter sauce and a sprinkle of poppy seeds.",
-    secondCourse : "",
+    secondCourse : "A classic Italian dish featuring large pasta tubes filled with a creamy mixture of spinach and ricotta cheese, baked in a rich tomato sauce and topped with a layer of melted mozzarella or béchamel, creating a comforting and flavorful baked pasta dish.",
     dessert : "A rustic Italian tart featuring a buttery, crumbly pastry crust filled with a vibrant, tangy marmalade made from seasonal fruits, offering a delightful balance of sweetness and tartness in every bite."
 }
 
@@ -204,10 +207,10 @@ const venetoMenuDescriptions = {
 const fallMenuImages = [pumpkinBread, pumpkinFlan, butternutSquashRavioli, pumpkinAndCinnamonCake];
 const forestMenuImages = [gulaschAndPolenta, pappardelleWithPorciniMushrooms, appleStrudel];
 const gnocchiMenuImages = [gnocchettiSardiWithArugulaPesto, gnocchiWithBeefRagu, rabatonAlessandrini, pannaCottaWithBerries];
-const ligureMenuImages = [focacciaDiRecco, minestroneGenovese, filledVegetables, tortaDellaNonna];
+const ligureMenuImages = [focaccia, minestroneGenovese, filledVegetables, tortaDellaNonna];
 const summertimeMenuImages = [caponata, cavatelliWithBasilPesto, polloAllaRomana, tortaCaprese];
 const nonnoMenuImages = [fricoFriulano, tortelliniInBroth, savoryCrumbleWithZucchiniAndSpeck, cantucciBiscotti];
-const monicasFavoriteMenuImages = [focaccia, casunziei, crostataDiMarmellata];
+const monicasFavoriteMenuImages = [piadinaRomagnola, casunziei, cannelloni, crostataDiMarmellata];
 const romeMenuImages= [suppliAllaRomana, spaghettiAlAmatriciana, saltimbocca, maritozzi];
 const seasonalMenuImages = [bruschettaAlPomodoro, risottoWithZucchiniAndSaffron, lemonChicken, lemonAndRicottaCake];
 const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
@@ -275,13 +278,14 @@ const Courses = () => {
                         description={gnocchiMenuDescriptions}
                     />
                     <CourseCard
-                        imageUrl={focaccia}
+                        imageUrl={piadinaRomagnola}
                         title="Monica's Favorite"
                         id="Monicas Favorite"
                         imageArray={monicasFavoriteMenuImages}
                         duration={"2 Hours"}
-                        appetizer={"Focaccia"}
+                        appetizer={"Piadina Romagnola"}
                         firstCourse={"Casunzei"}
+                        secondCourse={"Cannelloni With Spinach & Ricotta"}
                         dessert={"Crostata With Marmalade"}
                         description={monicasFavoriteMenuDescriptions}
                     />
@@ -387,12 +391,12 @@ const Courses = () => {
                 <div className="course-cards-container">
 
                     <CourseCard
-                        imageUrl={focacciaDiRecco}
+                        imageUrl={focaccia}
                         title="Ligure"
                         id="Ligure"
                         imageArray={ligureMenuImages}
                         duration={"2 Hours"}
-                        appetizer={"Focaccia di Recco"}
+                        appetizer={"Focaccia Genovese"}
                         firstCourse={"Minestrone Genovese"}
                         secondCourse={"Filled Vegetables"}
                         dessert={"Torta della Nonna"}
@@ -492,13 +496,14 @@ const Courses = () => {
                 </div>
                 <div className="course-cards-container">
                     <CourseCard
-                        imageUrl={focaccia}
+                        imageUrl={piadinaRomagnola}
                         title="Monica's Favorite"
                         id="Monicas Favorite"
                         imageArray={monicasFavoriteMenuImages}
                         duration={"2 Hours"}
-                        appetizer={"Focaccia"}
+                        appetizer={"Piadina Romagnola"}
                         firstCourse={"Casunzei"}
+                        secondCourse={"Cannelloni With Spinach & Ricotta"}
                         dessert={"Crostata With Marmalade"}
                         description={monicasFavoriteMenuDescriptions}
                     />
@@ -606,12 +611,12 @@ const Courses = () => {
 
                 <div className="course-cards-container">
                     <CourseCard
-                        imageUrl={focacciaDiRecco}
+                        imageUrl={focaccia}
                         title="Ligure"
                         id="Ligure"
                         imageArray={ligureMenuImages}
                         duration={"2 Hours"}
-                        appetizer={"Focaccia di Recco"}
+                        appetizer={"Focaccia Genovese"}
                         firstCourse={"Minestrone Genovese"}
                         secondCourse={"Filled Vegetables"}
                         dessert={"Torta della Nonna"}

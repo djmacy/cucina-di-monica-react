@@ -4,9 +4,10 @@ import CourseCard from './CourseCard';
 import "./HomeCookingClasses.css"
 
 //Monicas Favorite Menu Images
+import piadinaRomagnola from "../images/MonicasFavoriteMenu/piadinaRomagnola.jpg"
+import cannelloni from "../images/MonicasFavoriteMenu/cannelloniRicottaSpinach.jpg"
 import casunziei from "../images/MonicasFavoriteMenu/casunziei.png";
 import crostataDiMarmellata from "../images/MonicasFavoriteMenu/crostataDiMarmellata.png";
-import focaccia from "../images/MonicasFavoriteMenu/focaccia.png";
 //Sicilian
 import cannoli from "../images/SicilianMenu/cannoli.png";
 import arancini from "../images/SicilianMenu/arancini.png";
@@ -16,15 +17,15 @@ import risottoAllaMilanese from "../images/TasteOfItaly/risottoAllaMilanese.png"
 import lasagneAllaBolognese from "../images/TasteOfItaly/lasagneAllaBolognese.png";
 import baciDiDama from "../images/TasteOfItaly/baciDiDama.png";
 //Arrays
-const monicasFavoriteMenuImages = [focaccia, casunziei, crostataDiMarmellata];
+const monicasFavoriteMenuImages = [piadinaRomagnola, casunziei, cannelloni, crostataDiMarmellata];
 const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
 const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
 
 //Monicas Favorite Description
 const monicasFavoriteMenuDescriptions = {
-    appetizer : "A classic Italian flatbread, airy and soft on the inside with a golden, crisp crust, generously drizzled with extra virgin olive oil and sprinkled with sea salt and fresh rosemary, perfect as an appetizer or a side dish.",
+    appetizer : "A traditional flatbread from the Emilia-Romagna region, piadina is made with simple ingredients like flour, lard, and water, then cooked on a griddle. It’s typically served warm and folded around a variety of fillings, such as cured meats, cheeses, and fresh vegetables, offering a delicious and versatile meal or snack.",
     firstCourse : "Traditional stuffed pasta from the Dolomites, these half-moon-shaped ravioli are filled with a sweet-savory mixture of roasted red beets, potatoes, and ricotta, served with a sage butter sauce and a sprinkle of poppy seeds.",
-    secondCourse : "",
+    secondCourse : "A classic Italian dish featuring large pasta tubes filled with a creamy mixture of spinach and ricotta cheese, baked in a rich tomato sauce and topped with a layer of melted mozzarella or béchamel, creating a comforting and flavorful baked pasta dish.",
     dessert : "A rustic Italian tart featuring a buttery, crumbly pastry crust filled with a vibrant, tangy marmalade made from seasonal fruits, offering a delightful balance of sweetness and tartness in every bite."
 }
 //Sicilian  Description
@@ -55,13 +56,14 @@ const HomeCookingClasses = () => {
             <h2 className='section-title'>Class Favorites</h2>
             <div className='course-cards-container'>
                 <CourseCard
-                    imageUrl={focaccia}
+                    imageUrl={piadinaRomagnola}
                     title="Monica's Favorite"
                     id="Monicas Favorite Menu"
                     imageArray={monicasFavoriteMenuImages}
                     duration={"2 Hours"}
-                    appetizer={"Focaccia"}
+                    appetizer={"Piadina Romagnola"}
                     firstCourse={"Casunzei"}
+                    secondCourse={"Cannelloni With Spinach & Ricotta"}
                     dessert={"Crostata With Marmalade"}
                     description={monicasFavoriteMenuDescriptions}
                 />
