@@ -78,6 +78,12 @@ import danubioSalato from "../../images/ThatsAmoreMenu/danubioSalato.png";
 import eggplantParmigiana from "../../images/ThatsAmoreMenu/eggplantParmigiana.png";
 import heartShapedFilledPasta from "../../images/ThatsAmoreMenu/heartShapedFilledPasta.png";
 import strawberryTiramisu from "../../images/ThatsAmoreMenu/strawberryTiramisù.png";
+//Toscano Menu
+import panzanellaSalad from "../../images/ToscanoMenu/panzanellaSalad.jpeg";
+import schiacciataAllOlio from "../../images/ToscanoMenu/schiacciataAllOlio.jpeg";
+import ribollita from "../../images/ToscanoMenu/ribollita.jpeg";
+import ricciarelliDiSiena from "../../images/ToscanoMenu/ricciarelliDiSiena.jpeg"
+
 //Vegetarian Menu
 import pastaAllaNorma from "../../images/VegetarianMenu/pastaAllaNorma.png";
 import pistacchioTiramisu from "../../images/VegetarianMenu/pistacchioTiramisù.png"
@@ -186,6 +192,14 @@ const thatsAmoreMenuDescriptions = {
     dessert : "A fruity twist on the traditional tiramisu, this version layers coffee-soaked ladyfingers with a creamy mascarpone mixture, fresh strawberries, and a dusting of cocoa powder, offering a light and refreshing dessert with a hint of sweetness."
 }
 
+const toscanoMenuDescriptions = {
+    appetizer : "A classic Tuscan salad made with chunks of day-old bread, ripe tomatoes, cucumbers, red onions, and fresh basil, all tossed in a simple dressing of olive oil and vinegar. This rustic dish is a refreshing and flavorful way to enjoy the bounty of summer produce.",
+    firstCourse : "A traditional flatbread from Tuscany, Schiacciata all’Olio is made with olive oil and topped with a generous sprinkle of sea salt. It's baked until golden and crispy, making it a perfect accompaniment to meals or a delicious snack on its own.",
+    secondCourse : "A hearty Tuscan soup made with leftover bread, cannellini beans, and a mix of vegetables like kale, carrots, and celery. Slow-cooked to develop rich flavors, this traditional dish is a comforting and filling option, often enjoyed as a warming meal on a chilly day.",
+    dessert : "Traditional almond cookies from Siena, Ricciarelli are made with ground almonds, sugar, and egg whites, resulting in a soft, chewy texture. Lightly dusted with powdered sugar, these delightful treats are often enjoyed during the holidays or as a sweet ending to a meal."
+}
+
+
 //Vegetarian Description
 const vegetarianMenuDescriptions = {
     appetizer : "A visually stunning and flavorful bread, braided and infused with vibrant basil pesto, creating a soft, aromatic loaf with a golden crust that’s perfect for dipping or enjoying on its own.",
@@ -218,6 +232,7 @@ const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
 const springMenuImages = [savoryCroissant, crespelleWithCheeseAndSpinach, fruitAndCreamTart];
 const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
 const thatsAmoreMenuImages = [danubioSalato, heartShapedFilledPasta, eggplantParmigiana, strawberryTiramisu];
+const toscanoMenuImages = [panzanellaSalad, schiacciataAllOlio, ribollita, ricciarelliDiSiena];
 const vegetarianMenuImages = [pestoBraidedBread, zucchiniQuiche, garganelli, pistacchioTiramisu];
 const venetoMenuImages = [braidedBreadWithSorpressaAndAsiage, bigoliWithWhiteRagu, tiramisu];
 const Courses = () => {
@@ -427,6 +442,18 @@ const Courses = () => {
                         dessert={"Torta Caprese"}
                         description={summertimeMenuDescriptions}
                     />
+                    <CourseCard
+                        imageUrl={schiacciataAllOlio}
+                        title="Toscano"
+                        id="Toscano"
+                        imageArray={toscanoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Panzanella Salad"}
+                        firstCourse={"Schiacciata all'Olio"}
+                        secondCourse={"Ribollita"}
+                        dessert={"Ricciarelli di Siena"}
+                        description={toscanoMenuDescriptions}
+                    />
                 </div>
                 <LineText text="Cocktails"/>
                 <div className="course-cards-container">
@@ -635,6 +662,10 @@ const Courses = () => {
                         dessert={"Cantucci Biscotti"}
                         description={nonnoMenuDescriptions}
                     />
+
+                </div>
+                <div className="course-cards-container">
+
                     <CourseCard
                         imageUrl={caponata}
                         title="Summertime"
@@ -646,6 +677,18 @@ const Courses = () => {
                         secondCourse={"Pollo alla Romana"}
                         dessert={"Torta Caprese"}
                         description={summertimeMenuDescriptions}
+                    />
+                    <CourseCard
+                        imageUrl={schiacciataAllOlio}
+                        title="Toscano"
+                        id="Toscano"
+                        imageArray={toscanoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Panzanella Salad"}
+                        firstCourse={"Schiacciata all'Olio"}
+                        secondCourse={"Ribollita"}
+                        dessert={"Ricciarelli di Siena"}
+                        description={toscanoMenuDescriptions}
                     />
                 </div>
                 <LineText text="Cocktails"/>
