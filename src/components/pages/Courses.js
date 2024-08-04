@@ -21,7 +21,8 @@ import pappardelleWithPorciniMushrooms from "../../images/ForestMenu/pappardelle
 import gnocchettiSardiWithArugulaPesto from "../../images/GnocchiMenu/gnocchettiSardiWithArugulaPesto.png";
 import gnocchiWithBeefRagu from "../../images/GnocchiMenu/gnocchiWithBeefRagù.png";
 import pannaCottaWithBerries from "../../images/GnocchiMenu/pannaCottaWithBerries.png";
-import rabatonAlessandrini from "../../images/GnocchiMenu/rabatonAlessandrini(RicottaAndSpinachGnocchi).png";
+//import rabatonAlessandrini from "../../images/GnocchiMenu/rabatonAlessandrini(RicottaAndSpinachGnocchi).png";
+import gnocchiAllaRomana from "../../images/GnocchiMenu/gnocchiAllaRomana.jpeg";
 //Ligure Menu
 //import focacciaDiRecco from "../../images/LigureMenu/focacciaDiRecco.jpeg";
 import focaccia from "../../images/MonicasFavoriteMenu/focaccia.png";
@@ -109,7 +110,7 @@ const forestMenuDescriptions = {
 const gnocchiMenuDescriptions = {
     appetizer : "Delicate, shell-shaped pasta from Sardinia, tossed in a vibrant arugula pesto made with fresh arugula, pine nuts, garlic, Parmigiano-Reggiano, and extra virgin olive oil, offering a peppery twist on a classic sauce.",
     firstCourse : "Soft, pillowy potato gnocchi paired with a hearty, slow-cooked beef ragu, rich with tomatoes, red wine, and aromatic herbs, creating a comforting and satisfying dish.",
-    secondCourse : "Traditional Piedmontese dumplings made from a mixture of ricotta, spinach, and herbs, delicately rolled and baked with a light tomato sauce and a sprinkle of Parmigiano-Reggiano, embodying the flavors of Northern Italy.",
+    secondCourse : "A comforting Roman dish made with semolina flour, milk, butter, and Parmesan cheese, shaped into small rounds and baked until golden and crispy on top. These delicate, tender gnocchi are often served with a simple butter and sage sauce or a sprinkling of more cheese, making for a rich and satisfying meal.",
     dessert : "A silky, creamy dessert originating from Piedmont, made with sweetened cream and vanilla, set to perfection and served with a medley of fresh, seasonal berries for a refreshing finish."
 }
 
@@ -206,7 +207,7 @@ const venetoMenuDescriptions = {
 //menuArrays
 const fallMenuImages = [pumpkinBread, pumpkinFlan, butternutSquashRavioli, pumpkinAndCinnamonCake];
 const forestMenuImages = [gulaschAndPolenta, pappardelleWithPorciniMushrooms, appleStrudel];
-const gnocchiMenuImages = [gnocchettiSardiWithArugulaPesto, gnocchiWithBeefRagu, rabatonAlessandrini, pannaCottaWithBerries];
+const gnocchiMenuImages = [gnocchettiSardiWithArugulaPesto, gnocchiWithBeefRagu, gnocchiAllaRomana, pannaCottaWithBerries];
 const ligureMenuImages = [focaccia, minestroneGenovese, filledVegetables, tortaDellaNonna];
 const summertimeMenuImages = [caponata, cavatelliWithBasilPesto, polloAllaRomana, tortaCaprese];
 const nonnoMenuImages = [fricoFriulano, tortelliniInBroth, savoryCrumbleWithZucchiniAndSpeck, cantucciBiscotti];
@@ -273,7 +274,7 @@ const Courses = () => {
                         duration={"2 Hours"}
                         appetizer={"Gnocchetti Sardi \nWith Arugula Pesto"}
                         firstCourse={"Gnocchi With Beef Ragù"}
-                        secondCourse={"Rabaton Alessandrini"}
+                        secondCourse={"Gnocchi Alla Romana"}
                         dessert={"Panna Cotta With Berries"}
                         description={gnocchiMenuDescriptions}
                     />
@@ -488,7 +489,7 @@ const Courses = () => {
                         duration={"2 Hours"}
                         appetizer={"Gnocchetti Sardi \nWith Arugula Pesto"}
                         firstCourse={"Gnocchi With Beef Ragù"}
-                        secondCourse={"Rabaton Alessandrini"}
+                        secondCourse={"Gnocchi Alla Romana"}
                         dessert={"Panna Cotta With Berries"}
                         description={gnocchiMenuDescriptions}
                     />
