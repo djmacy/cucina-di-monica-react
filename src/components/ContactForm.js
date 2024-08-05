@@ -33,17 +33,21 @@ const ContactForm = () => {
         { label: 'Forest', value: 'Forest Menu' },
         { label: 'Gnocchi', value: 'Gnocchi Menu' },
         { label: 'Ligure', value: 'Ligure Menu' },
+        {label: 'Lombardo', value: 'Lombardo Menu'},
         { label: "Monica's Favorite", value: "Monica's Favorite Menu" },
         { label: 'Nonno', value: 'Nonno Menu' },
+        {label: "Piemontese", value: 'Piemontese Menu'},
         { label: 'Roma', value: 'Roma Menu' },
-        { label: 'Seasonal', value: 'Seasonal Menu' },
-        { label: 'Sicilian', value: 'Sicilian Menu' },
-        { label: 'Spring', value: 'Spring Menu' },
+        { label: 'Seasonal', value: 'Seasonal Menu'},
+        { label: 'Sicilian', value: 'Sicilian Menu'},
+        { label: 'Spring', value: 'Spring Menu'},
+        { label: 'Summertime', value: 'Summertime Menu'},
         { label: 'Taste of Italy', value: 'Taste of Italy Menu' },
+        {label: "Toscano", value: "Toscano Menu"},
         { label: "That's Amore", value: "That's Amore Menu" },
         { label: 'Vegetarian', value: 'Vegetarian Menu' },
         { label: 'Veneto', value: 'Veneto Menu' },
-        { label: 'Summertime', value: 'Summertime Menu' },
+
     ];
 
     const days = [

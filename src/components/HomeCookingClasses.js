@@ -15,11 +15,11 @@ import busiateWithTrapanese from "../images/SicilianMenu/busiateWithTrapanesePes
 //Taste of Italy
 import risottoAllaMilanese from "../images/TasteOfItaly/risottoAllaMilanese.png";
 import lasagneAllaBolognese from "../images/TasteOfItaly/lasagneAllaBolognese.png";
-import baciDiDama from "../images/TasteOfItaly/baciDiDama.png";
+import crostataCremaFrutta from "../images/TasteOfItaly/crostataCremaFrutta.jpeg";
 //Arrays
 const monicasFavoriteMenuImages = [piadinaRomagnola, casunziei, cannelloni, crostataDiMarmellata];
 const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
-const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
+const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, crostataCremaFrutta];
 
 //Monicas Favorite Description
 const monicasFavoriteMenuDescriptions = {
@@ -40,7 +40,7 @@ const tasteOfItalyMenuDescriptions = {
     appetizer : "A luxurious Milanese risotto made with Arborio rice, infused with aromatic saffron and cooked in a rich beef broth, finished with a generous grating of Parmigiano-Reggiano for a creamy, golden dish with a delicate flavor.",
     firstCourse : "A classic Italian lasagna layered with tender sheets of pasta, a hearty Bolognese sauce made from slow-cooked beef, tomatoes, and vegetables, and creamy béchamel sauce, all baked to perfection with a topping of melted cheese.",
     secondCourse : "",
-    dessert : "Delightful, bite-sized almond cookies from Piedmont, featuring a tender, crumbly texture and a rich hazelnut filling sandwiched between two delicate cookies, offering a sweet and nutty finish to any meal."
+    dessert : "A classic Italian dessert, this crostata features a buttery, crumbly pastry crust filled with a smooth, velvety pastry cream. It's beautifully topped with an array of fresh, seasonal fruits, creating a visually stunning and delicious treat. Perfect for any occasion, this dessert offers a delightful balance of rich creaminess and refreshing fruit flavors."
 }
 const HomeCookingClasses = () => {
     const navigate = useNavigate();
@@ -75,7 +75,7 @@ const HomeCookingClasses = () => {
                     duration={"2 Hours"}
                     appetizer={"Risotto Alla Milanese"}
                     firstCourse={"Lasagna Alla Bolognese"}
-                    dessert={"Baci Di Dama"}
+                    dessert={"Crostata With Crema & Fruits"}
                     description={tasteOfItalyMenuDescriptions}
                 />
                 <CourseCard

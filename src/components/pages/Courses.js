@@ -35,6 +35,13 @@ import fricoFriulano from "../../images/NonnoMenu/fricoFriulano.jpeg";
 import tortelliniInBroth from "../../images/NonnoMenu/TortelliniInBroth.jpeg";
 import savoryCrumbleWithZucchiniAndSpeck from "../../images/NonnoMenu/savoryCrumbleWithZucchini&Speck.jpeg";
 import cantucciBiscotti from "../../images/NonnoMenu/cantucciBiscotti.jpeg";
+
+//Piemontese Menu
+import insalataRussa from "../../images/PiemonteseMenu/insalataRussa.jpeg";
+import agnolottiDelPlin from "../../images/PiemonteseMenu/agnolottiDelPlin.jpeg";
+import tajarin from "../../images/PiemonteseMenu/tajarin.jpeg";
+import baciDiDama from "../../images/PiemonteseMenu/baciDiDama.png"
+
 //Summertime Menu
 import caponata from "../../images/SummertimeMenu/caponata.jpg";
 import cavatelliWithBasilPesto from "../../images/SummertimeMenu/cavatelliWithBasilPesto.jpeg";
@@ -46,6 +53,12 @@ import cannelloni from "../../images/MonicasFavoriteMenu/cannelloniRicottaSpinac
 import casunziei from "../../images/MonicasFavoriteMenu/casunziei.png";
 import crostataDiMarmellata from "../../images/MonicasFavoriteMenu/crostataDiMarmellata.png";
 
+//Lombardo Menu Images
+import sciattValtellinesi from "../../images/LombardoMenu/sciattValtellinesi.jpeg";
+import pizzoccheri from  "../../images/LombardoMenu/pizzoccheri.jpeg";
+import casoncelliAllaBergamasa from "../../images/LombardoMenu/casoncelliAllaBergamasca.jpeg";
+import tortaSbrisolona from "../../images/LombardoMenu/tortaSbrisolona.jpeg";
+
 //Roma Menu Images
 import maritozzi from "../../images/RomaMenu/maritozzi.png";
 import spaghettiAlAmatriciana from "../../images/RomaMenu/spaghettiAlAmatriciana.jpg";
@@ -53,9 +66,9 @@ import spaghettiAlAmatriciana from "../../images/RomaMenu/spaghettiAlAmatriciana
 import saltimbocca from "../../images/RomaMenu/saltimbocca.png";
 import suppliAllaRomana from "../../images/RomaMenu/supplìAllaRomana.png";
 //SeasonalMenu Images
-import savoryBread from "../../images/SeasonalMenu/savoryBread.png";
-import lasagnaWithBaconAndBroccoli from "../../images/SeasonalMenu/lasagnaWithBaconAndBrocolli.png";
-import zeppoleDiSanGiusseppe from "../../images/SeasonalMenu/zeppoleDiSanGiuseppe.png";
+//import savoryBread from "../../images/SeasonalMenu/savoryBread.png";
+//import lasagnaWithBaconAndBroccoli from "../../images/SeasonalMenu/lasagnaWithBaconAndBrocolli.png";
+//import zeppoleDiSanGiusseppe from "../../images/SeasonalMenu/zeppoleDiSanGiuseppe.png";
 import bruschettaAlPomodoro from "../../images/SeasonalMenu/bruschettaAlPomodoro.jpg";
 import risottoWithZucchiniAndSaffron from "../../images/SeasonalMenu/risottoAlleZucchineSaffron.jpeg";
 import lemonChicken from "../../images/SeasonalMenu/lemonChicken.jpeg";
@@ -70,9 +83,10 @@ import fruitAndCreamTart from "../../images/SpringMenu/fruitAndCreamTart.png";
 import crespelleWithCheeseAndSpinach from "../../images/SpringMenu/crespelleWithCheeseAndSpinach.png";
 import savoryCroissant from "../../images/SpringMenu/savoryCroissant.png";
 //Taste of Italy Menu
-import baciDiDama from "../../images/TasteOfItaly/baciDiDama.png";
+//import baciDiDama from "../../images/TasteOfItaly/baciDiDama.png";
 import lasagneAllaBolognese from "../../images/TasteOfItaly/lasagneAllaBolognese.png";
 import risottoAllaMilanese from "../../images/TasteOfItaly/risottoAllaMilanese.png";
+import crostataCremaFrutta from "../../images/TasteOfItaly/crostataCremaFrutta.jpeg";
 //Thats Amore Menu
 import danubioSalato from "../../images/ThatsAmoreMenu/danubioSalato.png";
 import eggplantParmigiana from "../../images/ThatsAmoreMenu/eggplantParmigiana.png";
@@ -127,12 +141,27 @@ const ligureMenuDescriptions = {
     secondCourse : "A traditional Ligurian dish featuring a selection of vegetables such as zucchini, peppers, and eggplant, stuffed with a savory mixture of breadcrumbs, herbs, and cheese, then baked until tender and flavorful.",
     dessert : "A classic Italian dessert from Liguria, this \"Grandmother's Cake\" is a creamy custard tart with a buttery, crisp pastry crust, often garnished with pine nuts and powdered sugar, offering a comforting and indulgent treat."
 }
+//Lombardo Description
+const lombardoMenuDescriptions = {
+    appetizer: "A specialty from the Valtellina region in Lombardy, Sciatt are savory fritters made from a buckwheat batter filled with melted cheese, typically Casera. These crispy, golden-brown morsels are served hot, often as an appetizer, and provide a delightful contrast between the crunchy exterior and gooey cheese inside.",
+    firstCourse : "A hearty pasta dish from the Valtellina region, Pizzoccheri is made with buckwheat flour and traditionally served with a mix of potatoes, Savoy cabbage, and melted cheese, usually Valtellina Casera, all brought together with a generous helping of garlic-infused butter. This rustic dish is a comforting favorite during the colder months.",
+    secondCourse : "A beloved dish from Bergamo in Lombardy, Casoncelli are crescent-shaped pasta filled with a unique mixture of meats, breadcrumbs, and often amaretti cookies. They are typically served with a simple yet flavorful sauce of browned butter, sage, and pancetta, creating a perfect balance of sweet and savory.",
+    dessert: "A traditional dessert from Mantua in Lombardy, Torta Sbrisolona is a crumbly, rustic cake made with a mixture of cornmeal, almonds, and butter. Its name comes from the Italian word \"sbriciolare,\" meaning to crumble, as it’s meant to be broken into pieces by hand rather than sliced. Often enjoyed with a glass of sweet wine, this cake offers a delightful contrast between its crunchy texture and rich, buttery flavor."
+}
+
 //Nonno Description
 const nonnoMenuDescriptions = {
     appetizer : "A traditional dish from Friuli-Venezia Giulia featuring crispy, golden cheese pancakes made from a mix of aged Montasio cheese and potatoes, often served with a side of polenta or a fresh salad for a satisfying and savory treat.",
     firstCourse : "A comforting classic from Emilia-Romagna, this dish features delicate, handmade tortellini stuffed with a rich filling of meat or cheese, served in a clear, flavorful broth, offering a warm and nourishing experience.",
     secondCourse : "A delightful, savory twist on the traditional crumble, featuring a topping of buttery, crumbly pastry over a mixture of sautéed zucchini and speck (cured ham), creating a satisfying combination of textures and flavors.",
     dessert : "Traditional Tuscan almond cookies, also known as cantucci, which are twice-baked for extra crunch and flavor. These crisp, slightly sweet biscotti are perfect for dipping in a glass of Vin Santo or enjoying on their own."
+}
+//Piemonte
+const piemonteMenuDescriptions = {
+    appetizer: "A popular appetizer with roots in Russian cuisine, Insalata Russa has been embraced and adapted by the Piedmont region of Italy. This creamy salad features a mix of finely chopped vegetables like carrots, peas, and potatoes, often combined with pickles and sometimes tuna, all bound together with a rich mayonnaise dressing.",
+    firstCourse : "A specialty of the Piedmont region, Agnolotti del Plin are small, delicate pasta parcels filled with a mixture of meats or vegetables. Traditionally pinched (\"plin\" means pinch in the local dialect) to seal them, these bite-sized delights are usually served in a light broth or with a simple butter and sage sauce, highlighting the rich and tender filling.",
+    secondCourse : "A traditional Piedmontese pasta, Tajarin is made with a high ratio of egg yolks, giving it a rich yellow color and a tender texture. These thin, golden strands of pasta are often served with a luxurious sauce, such as butter and sage, truffle, or a slow-cooked meat ragù, making it a true delicacy.",
+    dessert : "Delightful, bite-sized almond cookies from Piedmont, featuring a tender, crumbly texture and a rich hazelnut filling sandwiched between two delicate cookies, offering a sweet and nutty finish to any meal."
 }
 //Summertime Description
 const summertimeMenuDescriptions = {
@@ -182,7 +211,7 @@ const tasteOfItalyMenuDescriptions = {
     appetizer : "A luxurious Milanese risotto made with Arborio rice, infused with aromatic saffron and cooked in a rich beef broth, finished with a generous grating of Parmigiano-Reggiano for a creamy, golden dish with a delicate flavor.",
     firstCourse : "A classic Italian lasagna layered with tender sheets of pasta, a hearty Bolognese sauce made from slow-cooked beef, tomatoes, and vegetables, and creamy béchamel sauce, all baked to perfection with a topping of melted cheese.",
     secondCourse : "",
-    dessert : "Delightful, bite-sized almond cookies from Piedmont, featuring a tender, crumbly texture and a rich hazelnut filling sandwiched between two delicate cookies, offering a sweet and nutty finish to any meal."
+    dessert : "A classic Italian dessert, this crostata features a buttery, crumbly pastry crust filled with a smooth, velvety pastry cream. It's beautifully topped with an array of fresh, seasonal fruits, creating a visually stunning and delicious treat. Perfect for any occasion, this dessert offers a delightful balance of rich creaminess and refreshing fruit flavors."
 }
 //Thats Amore Description
 const thatsAmoreMenuDescriptions = {
@@ -223,14 +252,16 @@ const fallMenuImages = [pumpkinBread, pumpkinFlan, butternutSquashRavioli, pumpk
 const forestMenuImages = [gulaschAndPolenta, pappardelleWithPorciniMushrooms, appleStrudel];
 const gnocchiMenuImages = [gnocchettiSardiWithArugulaPesto, gnocchiWithBeefRagu, gnocchiAllaRomana, pannaCottaWithBerries];
 const ligureMenuImages = [focaccia, minestroneGenovese, filledVegetables, tortaDellaNonna];
+const lombardoMenuImages = [sciattValtellinesi, pizzoccheri, casoncelliAllaBergamasa, tortaSbrisolona];
 const summertimeMenuImages = [caponata, cavatelliWithBasilPesto, polloAllaRomana, tortaCaprese];
 const nonnoMenuImages = [fricoFriulano, tortelliniInBroth, savoryCrumbleWithZucchiniAndSpeck, cantucciBiscotti];
 const monicasFavoriteMenuImages = [piadinaRomagnola, casunziei, cannelloni, crostataDiMarmellata];
+const piemonteMenuImages = [insalataRussa, agnolottiDelPlin, tajarin, baciDiDama];
 const romeMenuImages= [suppliAllaRomana, spaghettiAlAmatriciana, saltimbocca, maritozzi];
 const seasonalMenuImages = [bruschettaAlPomodoro, risottoWithZucchiniAndSaffron, lemonChicken, lemonAndRicottaCake];
 const sicilianMenuImages = [arancini, busiateWithTrapanese, cannoli];
 const springMenuImages = [savoryCroissant, crespelleWithCheeseAndSpinach, fruitAndCreamTart];
-const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, baciDiDama];
+const tasteOfItalyMenuImages = [risottoAllaMilanese, lasagneAllaBolognese, crostataCremaFrutta];
 const thatsAmoreMenuImages = [danubioSalato, heartShapedFilledPasta, eggplantParmigiana, strawberryTiramisu];
 const toscanoMenuImages = [panzanellaSalad, schiacciataAllOlio, ribollita, ricciarelliDiSiena];
 const vegetarianMenuImages = [pestoBraidedBread, zucchiniQuiche, garganelli, pistacchioTiramisu];
@@ -349,7 +380,7 @@ const Courses = () => {
                         duration={"2 Hours"}
                         appetizer={"Risotto Alla Milanese"}
                         firstCourse={"Lasagna Alla Bolognese"}
-                        dessert={"Baci Di Dama"}
+                        dessert={"Crostata With Crema & Fruits"}
                         description={tasteOfItalyMenuDescriptions}
                     />
                 </div>
@@ -419,6 +450,18 @@ const Courses = () => {
                         description={ligureMenuDescriptions}
                     />
                     <CourseCard
+                        imageUrl={casoncelliAllaBergamasa}
+                        title="Lombardo"
+                        id="Lombardo"
+                        imageArray={lombardoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Sciatt Valtellinesi"}
+                        firstCourse={"Pizzoccheri"}
+                        secondCourse={"Casoncelli alla Bergamasca"}
+                        dessert={"Torta Sbrisolona"}
+                        description={lombardoMenuDescriptions}
+                    />
+                    <CourseCard
                         imageUrl={tortelliniInBroth}
                         title="Nonno"
                         id="Nonno"
@@ -429,6 +472,22 @@ const Courses = () => {
                         secondCourse={"Savory Crumble with \nZucchini and Speck"}
                         dessert={"Cantucci Biscotti"}
                         description={nonnoMenuDescriptions}
+                    />
+
+
+                </div>
+                <div className="course-cards-container">
+                    <CourseCard
+                        imageUrl={tajarin}
+                        title="Piemontese"
+                        id="Piemontese"
+                        imageArray={piemonteMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Insalata Russa"}
+                        firstCourse={"Agnolotti del Plin"}
+                        secondCourse={"Tajarin"}
+                        dessert={"Baci di Dama"}
+                        description={piemonteMenuDescriptions}
                     />
                     <CourseCard
                         imageUrl={caponata}
@@ -581,7 +640,7 @@ const Courses = () => {
                         duration={"2 Hours"}
                         appetizer={"Risotto Alla Milanese"}
                         firstCourse={"Lasagna Alla Bolognese"}
-                        dessert={"Baci Di Dama"}
+                        dessert={"Crostata With Crema & Fruits"}
                         description={tasteOfItalyMenuDescriptions}
                     />
                     <CourseCard
@@ -651,6 +710,18 @@ const Courses = () => {
                         description={ligureMenuDescriptions}
                     />
                     <CourseCard
+                        imageUrl={casoncelliAllaBergamasa}
+                        title="Lombardo"
+                        id="Lombardo"
+                        imageArray={lombardoMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Sciatt Valtellinesi"}
+                        firstCourse={"Pizzoccheri"}
+                        secondCourse={"Casoncelli alla Bergamasca"}
+                        dessert={"Torta Sbrisolona"}
+                        description={lombardoMenuDescriptions}
+                    />
+                    <CourseCard
                         imageUrl={tortelliniInBroth}
                         title="Nonno"
                         id="Nonno"
@@ -663,9 +734,21 @@ const Courses = () => {
                         description={nonnoMenuDescriptions}
                     />
 
+
                 </div>
                 <div className="course-cards-container">
-
+                    <CourseCard
+                        imageUrl={tajarin}
+                        title="Piemontese"
+                        id="Piemontese"
+                        imageArray={piemonteMenuImages}
+                        duration={"2 Hours"}
+                        appetizer={"Insalata Russa"}
+                        firstCourse={"Agnolotti del Plin"}
+                        secondCourse={"Tajarin"}
+                        dessert={"Baci di Dama"}
+                        description={piemonteMenuDescriptions}
+                    />
                     <CourseCard
                         imageUrl={caponata}
                         title="Summertime"
