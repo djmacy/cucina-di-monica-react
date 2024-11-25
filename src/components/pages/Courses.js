@@ -121,7 +121,7 @@ const fallMenuDescriptions = {
 }
 //Forest Menu Description
 const forestMenuDescriptions = {
-    appetizer : "A hearty and flavorful dish featuring tender pieces of slow-cooked beef stew, simmered with onions, paprika, and a rich, spiced sauce, served alongside creamy, soft polenta for a comforting and satisfying meal.",
+    appetizer : "Spezzatino is a traditional Italian stew made with tender chunks of meat, slow-cooked with vegetables like carrots, onions, and celery in a flavorful sauce of wine, broth, or tomato. Often served with polenta, mashed potatoes, or bread, it’s a hearty and comforting dish.",
     firstCourse : "Wide, ribbon-like pappardelle pasta served with a rich and earthy porcini mushroom sauce, made with sautéed mushrooms, garlic, white wine, and finished with a touch of cream, creating a luxurious and flavorful dish.",
     secondCourse : "",
     dessert : "A classic pastry filled with spiced apples, raisins, and cinnamon, wrapped in a thin, crispy dough and baked to perfection. It’s often served warm with a dusting of powdered sugar and a side of vanilla ice cream or whipped cream for a delightful dessert."
@@ -307,7 +307,7 @@ const Courses = () => {
                         id="Forest"
                         imageArray={forestMenuImages}
                         duration={"2 Hours"}
-                        appetizer={"Gulasch And Polenta"}
+                        appetizer={"Spezzatino And Polenta"}
                         firstCourse={"Pappardelle With \nPorcini Mushrooms"}
                         dessert={"Apple Strudel"}
                         description={forestMenuDescriptions}
@@ -562,7 +562,7 @@ const Courses = () => {
                         id="Forest"
                         imageArray={forestMenuImages}
                         duration={"2 Hours"}
-                        appetizer={"Gulasch And Polenta"}
+                        appetizer={"Spezzatino And Polenta"}
                         firstCourse={"Pappardelle With \nPorcini Mushrooms"}
                         dessert={"Apple Strudel"}
                         description={forestMenuDescriptions}
